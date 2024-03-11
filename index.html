@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="icons/CSIRO_Logo.svg" sizes="16x16" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Homepage">
+    <meta name="author" content="Ziqi Xu">
+    <meta name="keywords"
+        content="Ziqi Xu CSIRO Data 61 University of South Australia The University of Adelaide">
+
+    <title>Ziqi Xu's Homepage</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/non-responsive.css" rel="stylesheet">
+    <link href="./css/social-buttons-3.css" rel="stylesheet">
+    <script src="./js/ie-emulation-modes-warning.js"></script>
+    <link href="./font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Customize CSS -->
+    <link href="./css/ziqi.css" rel="stylesheet">
+    <script src="./index_files/ie-emulation-modes-warning.js"></script>
+    <script type="text/javascript">
+        function display(id) {
+            var currentDisplay = document.getElementById(id).style.display;
+            if (currentDisplay == 'none') {
+                document.getElementById(id).style.display = "inline";
+            }
+            else {
+                document.getElementById(id).style.display = "none";
+            }
+            if (is_selected == true) {
+                $("#pub-by-selected").click();
+            } else {
+                $("#pub-by-date").click();
+            }
+        }
+    </script>
+</head>
+
+<body data-feedly-mini="yes">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="scroll-top navbar-brand" href="https://iron13.github.io/"><b>Ziqi Xu</b></a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- <li><a href="#education">Education</a></li> -->
+                    <li><a href="#publication">Publications</a></li>
+                    <!-- <li><a href="#people">People</a></li> -->
+                    <li><a href="#teaching">Teaching</a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <!-- Begin page content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Ziqi Xu | 徐梓淇 </h1>
+                <address>
+                    <br> CERC Fellow
+                    <br> <a href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>
+                    <br> <a href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation</a> (CSIRO)
+                    <br> Email: ziqi.xu@data61.csiro.au | ziqi.xu@mymail.unisa.edu.au | ziqi.xu@unisa.edu.au</a>
+                    <br> Office: Data 61, Research Way, Clayton Vic 3168
+                    <br> 
+                    <!-- [<a href="">Curriculum Vitae</a>]  -->
+                    [<a href="https://scholar.google.com.au/citations?user=znODztEAAAAJ&hl=en">Google Scholar</a>]
+                    [<a href="https://www.linkedin.com/in/ziqi-xu-846510113/">LinkedIn</a>]
+                    <!-- [<a href="">DBLP</a>] -->
+                    <!-- [<a href="">Thesis</a>] -->
+                </address>
+            </div>
+            <div class="col-md-4">
+                <img src="./images/ziqi.jpg" class="img_responsive">
+            </div>
+        </div>
+
+        <span id="bio" name="bio">
+            <h3>About Me</h3>
+        </span>
+        <table class="table table-hover">
+            <p style="top-margin: 100px;"></p>
+            <td>
+                I am a CERC Fellow at the <a href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>, <a href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</a>. I obtained my Ph.D. from the <a href="https://www.unisa.edu.au/about-unisa/academic-units/stem/">STEM</a>,
+                <a href="https://www.unisa.edu.au/">University of South Australia</a>, where I was supervised by <a
+                    href="https://people.unisa.edu.au/jiuyong.li">Jiuyong Li</a>. During my Ph.D., I have also been closely
+                working with <a href="https://people.unisa.edu.au/jixue.liu">Jixue Liu</a> and <a href="https://people.unisa.edu.au/lin.liu">Lin Liu</a>. Previously, I
+                obtained my Master's degree from the <a href="https://set.adelaide.edu.au/computer-and-mathematical-sciences/">School of Computer and Mathematical Sciences</a> at <a href="https://www.adelaide.edu.au/">The University of Adelaide</a>.
+            </td>
+        </table>
+
+        <h4 id="publication" name="publication">
+            <h3> Publications
+                [
+                <a href="" id="pub-by-selected" style="text-decoration: underline; color: rgb(0, 0, 0);">show
+                    selected</a>
+                /
+                <a href="" id="pub-by-date">show by date</a>
+                ]
+            </h3>
+            <h5>
+                (* denotes equal contribution)
+            </h5>
+
+            <div id="all-papers-container" style="display:none">
+                <div class="pubs" paper-year="2024" paper-select="true" topic="causalinference">
+                    <strong> Causal Inference with Conditional Front-Door Adjustment and Identifiable Variational Autoencoder </strong>
+                    <br> <b>Xu, Z.</b>, Cheng, D., Li, J., Liu, J., Liu, L., and Yu, K.
+                    <br> In Proceedings of the International Conference on Learning Representations (<b>ICLR 2024</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('CFDiVAE-abs')">abs</a>]
+                    [<a href="./paper/CFDiVAE.pdf">pdf</a>]
+                    <div id="CFDiVAE-abs" style="display:none">
+                        <p>
+                            An essential and challenging problem in causal inference is causal effect estimation from observational data. The problem becomes more difficult with the presence of unobserved confounding variables. The front-door adjustment is an approach for dealing with unobserved confounding variables. However, the restriction for the standard front-door adjustment is difficult to satisfy in practice. In this paper, we relax some of the restrictions by proposing the concept of conditional front-door (CFD) adjustment and develop the theorem that guarantees the causal effect identifiability of CFD adjustment. By leveraging the ability of deep generative models, we propose CFDiVAE to learn the representation of the CFD adjustment variable directly from data with the identifiable Variational AutoEncoder and formally prove the model identifiability. Extensive experiments on synthetic datasets validate the effectiveness of CFDiVAE and its superiority over existing methods. The experiments also show that the performance of CFDiVAE is less sensitive to the causal strength of unobserved confounding variables. We further apply CFDiVAE to a real-world dataset to demonstrate its potential application.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2024" paper-select="true" topic="causalinference">
+                    <strong> Conditional Instrumental Variable Regression with Representation Learning for Causal Inference </strong>
+                    <br> Cheng, D.*, <b>Xu, Z.*</b>, Li, J., Liu, J., Liu, L., and Le, T.D.
+                    <br> In Proceedings of the International Conference on Learning Representations (<b>ICLR 2024</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('CBRL.CIV-abs')">abs</a>]
+                    [<a href="./paper/CBRL.CIV.pdf">pdf</a>]
+                    <div id="CBRL.CIV-abs" style="display:none">
+                        <p>
+                            This paper studies the challenging problem of estimating causal effects from observational data, in the presence of unobserved confounders. The two-stage least square (TSLS) method and its variants with a standard instrumental variable (IV) are commonly used to eliminate confounding bias, including the bias caused by unobserved confounders, but they rely on the linearity assumption. Besides, the strict condition of unconfounded instruments posed on a standard IV is too strong to be practical. To address these challenging and practical problems of the standard IV method (linearity assumption and the strict condition), in this paper, we use a conditional IV (CIV) to relax the unconfounded instrument condition of standard IV and propose a non-linear CIV regression with Confounding Balancing Representation Learning, CBRL.CIV, for jointly eliminating the confounding bias from unobserved confounders and balancing the observed confounders, without the linearity assumption. We theoretically demonstrate the soundness of CBRL.CIV. Extensive experiments on synthetic and two real-world datasets show the competitive performance of CBRL.CIV against state-of-the-art IV-based estimators and superiority in dealing with the non-linear situation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2024" paper-select="true" topic="causalinference">
+                    <strong> Instrumental Variable Estimation for Causal Inference in Longitudinal Data with Time-Dependent Latent Confounders </strong>
+                    <br> Cheng, D.*, <b>Xu, Z.*</b>, Li, J., Liu, J., Liu, L., Gao, W. and Le, T.D.
+                    <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2024</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('TIFM-abs')">abs</a>]
+                    [<a href="./paper/TIFM.pdf">pdf</a>]
+                    <div id="TIFM-abs" style="display:none">
+                        <p>
+                            Causal inference from longitudinal observational data is a challenging problem due to the difficulty in correctly identifying the time-dependent confounders, especially in the presence of latent time-dependent confounders. Instrumental variable (IV) is a powerful tool for addressing the latent confounders issue, but the traditional IV technique cannot deal with latent time-dependent confounders in longitudinal studies. In this work, we propose a novel Time-dependent Instrumental Factor Model (TIFM) for time-varying causal effect estimation from data with latent time-dependent confounders. At each time-step, the proposed TIFM method employs the Recurrent Neural Network (RNN) architecture to infer latent IV, and then uses the inferred latent IV factor for addressing the confounding bias caused by the latent time-dependent confounders. We provide a theoretical analysis for the proposed TIFM method regarding causal effect estimation in longitudinal data. Extensive evaluation with synthetic datasets demonstrates the effectiveness of TIFM in addressing causal effect estimation over time. We further apply TIFM to a climate dataset to showcase the potential of the proposed method in tackling real-world problems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2023" paper-select="true" topic="causalinference">
+                    <strong> Disentangled Representation for Causal Mediation Analysis </strong>
+                    <br> <b>Xu, Z.</b>, Cheng, D., Li, J., Liu, J., Liu, L. and Wang, K.
+                    <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2023, Oral</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DMAVAE-abs')">abs</a>]
+                    [<a href="./paper/DMAVAE.pdf">pdf</a>]
+                    <div id="DMAVAE-abs" style="display:none">
+                        <p>
+                            Estimating direct and indirect causal effects from observational data is crucial to understanding the causal mechanisms and predicting the behaviour under different interventions. Causal mediation analysis is a method that is often used to reveal direct and indirect effects. Deep learning shows promise in mediation analysis, but the current methods only assume latent confounders that affect treatment, mediator and outcome simultaneously, and fail to identify different types of latent confounders (e.g., confounders that only affect the mediator or outcome). Furthermore, current methods are based on the sequential ignorability assumption, which is not feasible for dealing with multiple types of latent confounders. This work aims to circumvent the sequential ignorability assumption and applies the piecemeal deconfounding assumption as an alternative. We propose the Disentangled Mediation Analysis Variational AutoEncoder (DMAVAE), which disentangles the representations of latent confounders into three types to accurately estimate the natural direct effect, natural indirect effect and total effect. Experimental results show that the proposed method outperforms existing methods and has strong generalisation ability. We further apply the method to a real-world dataset to show its potential application.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2023" paper-select="true" topic="causalinference">
+                    <strong> Causal Inference with Conditional Instruments Using Deep Generative Models </strong>
+                    <br> Cheng, D.*, <b>Xu, Z.*</b>, Li, J., Liu, L., Liu, J. and Le, T.D.
+                    <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2023, Oral</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('CIVVAE-abs')">abs</a>]
+                    [<a href="./paper/CIVVAE.pdf">pdf</a>]
+                    <div id="CIVVAE-abs" style="display:none">
+                        <p>
+                            The instrumental variable (IV) approach is a widely used way to estimate the causal effects of a treatment on an outcome of interest from observational data with latent confounders. A standard IV is expected to be related to the treatment variable and independent of all other variables in the system. However, it is challenging to search for a standard IV from data directly due to the strict conditions. The conditional IV (CIV) method has been proposed to allow a variable to be an instrument conditioning on a set of variables, allowing a wider choice of possible IVs and enabling broader practical applications of the IV approach. Nevertheless, there is not a data-driven method to discover a CIV and its conditioning set directly from data. To fill this gap, in this paper, we propose to learn the representations of the information of a CIV and its conditioning set from data with latent confounders for average causal effect estimation. By taking advantage of deep generative models, we develop a novel data-driven approach for simultaneously learning the representation of a CIV from measured variables and generating the representation of its conditioning set given measured variables. Extensive experiments on synthetic and real-world datasets show that our method outperforms the existing IV methods.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2023" paper-select="true" topic="causalinference">
+                    <strong> Learning Conditional Instrumental Variable Representation for Causal Effect Estimation </strong>
+                    <br> Cheng, D.*, <b>Xu, Z.*</b>, Li, J., Liu, L., Le, T.D. and Liu, J.
+                    <br> In Proceedings of the Joint European Conference on Machine Learning and Knowledge Discovery in Databases (<b>ECML-PKDD 2023</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DVAE.CIV-abs')">abs</a>]
+                    [<a href="./paper/DVAE.CIV.pdf">pdf</a>]
+                    <div id="DVAE.CIV-abs" style="display:none">
+                        <p>
+                            One of the fundamental challenges in causal inference is to estimate the causal effect of a treatment on its outcome of interest from observational data. However, causal effect estimation often suffers from the impacts of confounding bias caused by unmeasured confounders that affect both the treatment and the outcome. The instrumental variable (IV) approach is a powerful way to eliminate the confounding bias from latent confounders. However, the existing IV-based estimators require a nominated IV, and for a conditional IV (CIV) the corresponding conditioning set too, for causal effect estimation. This limits the application of IV-based estimators. In this paper, by leveraging the advantage of disentangled representation learning, we propose a novel method, named DVAE.CIV, for learning and disentangling the representations of CIV and the representations of its conditioning set for causal effect estimations from data with latent confounders. Extensive experimental results on both synthetic and real-world datasets demonstrate the superiority of the proposed DVAE.CIV method against the existing causal effect estimators.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2023" paper-select="true" topic="fairness">
+                    <strong> Disentangled Representation with Causal Constraints for Counterfactual Fairness </strong>
+                    <br> <b>Xu, Z.</b>, Liu, J., Cheng, D., Li, J., Liu, L. and Wang, K.
+                    <br> In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD 2023</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('CF-VAE-abs')">abs</a>]
+                    [<a href="./paper/CF-VAE.pdf">pdf</a>]
+                    <div id="CF-VAE-abs" style="display:none">
+                        <p>
+                            Much research has been devoted to the problem of learning fair representations; however, they do not explicitly state the relationship between latent representations. In many real-world applications, there may be causal relationships between latent representations. Furthermore, most fair representation learning methods focus on group-level fairness and are based on correlation, ignoring the causal relationships underlying the data. In this work, we theoretically demonstrate that using the structured representations enables downstream predictive models to achieve counterfactual fairness, and then we propose the Counterfactual Fairness Variational AutoEncoder (CF-VAE) to obtain structured representations with respect to domain knowledge. The experimental results show that the proposed method achieves better fairness and accuracy performance than the benchmark fairness methods.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2023" paper-select="false" topic="causalinference">
+                    <strong> A Data-Driven Approach to Finding K for K Nearest Neighbor Matching in Average Causal Effect Estimation </strong>
+                    <br> Xu, T., Zhang, Y., Li, J., Liu, L., <b>Xu, Z.</b>, Cheng, D. and Feng, Z.
+                    <br> In Proceedings of the International Conference on Web Information Systems Engineering (<b>WISE 2023</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DK-NNM-abs')">abs</a>]
+                    [<a href="./paper/DK-NNM.pdf">pdf</a>]
+                    <div id="DK-NNM-abs" style="display:none">
+                        <p>
+                            In causal inference, a fundamental task is to estimate causal effects using observational data with confounding variables. K Nearest Neighbor Matching (K-NNM) is a commonly used method to address confounding bias. However, the traditional K-NNM method uses the same K value for all units, which may result in unacceptable performance in real-world applications. To address this issue, we propose a novel nearest-neighbor matching method called DK-NNM, which uses a data-driven approach to searching for the optimal K values for different units. DK-NNM first reconstructs a sparse coefficient matrix of all units via sparse representation learning for finding the optimal K value for each unit. Then, the joint propensity scores and prognostic scores are utilized to deal with high-dimensional covariates when performing K nearest-neighbor matching with the obtained K value for a unit. Extensive experiments are conducted on both semi-synthetic and real-world datasets, and the results demonstrate that the proposed DK-NNM method outperforms the state-of-the-art causal effect estimation methods in estimating average causal effects from observational data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2023" paper-select="true" topic="causalinference">
+                    <strong> Disentangled Latent Representation Learning for Tackling the Confounding M-Bias Problem in Causal Inference </strong>
+                    <br> Cheng, D.*, Xie, Y.*, <b>Xu, Z.*</b>, Li, J., Liu, L., Liu, J., Zhang, Y. and Feng, Z.
+                    <br> In Proceedings of the IEEE International Conference on Data Mining (<b>ICDM 2023, Long paper</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DLRCE-abs')">abs</a>]
+                    [<a href="./paper/DLRCE.pdf">pdf</a>]
+                    <div id="DLRCE-abs" style="display:none">
+                        <p>
+                            In causal inference, it is a fundamental task to estimate the causal effect from observational data. However, latent confounders pose major challenges in causal inference in observational data, for example, confounding bias and M-bias. Recent data-driven causal effect estimators tackle the confounding bias problem via balanced representation learning, but assume no M-bias in the system, thus they fail to handle the M-bias. In this paper, we identify a challenging and unsolved problem caused by a variable that leads to confounding bias and M-bias simultaneously. To address this problem with co-occurring M-bias and confounding bias, we propose a novel Disentangled Latent Representation learning framework for learning latent representations from proxy variables for unbiased Causal effect Estimation (DLRCE) from observational data. Specifically, DLRCE learns three sets of latent representations from the measured proxy variables to adjust for the confounding bias and M-bias. Extensive experiments on both synthetic and three real-world datasets demonstrate that DLRCE significantly outperforms the state-of-the-art estimators in the case of the presence of both confounding bias and M-bias.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2022" paper-select="true" topic="fairness">
+                    <strong> Assessing Classifier Fairness with Collider Bias </strong>
+                    <br> Xu, Z.*, <b>Xu, Z.*</b>, Liu, J., Cheng, D., Li, J., Liu, L. and Wang, K.
+                    <br> In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD 2022</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('Assessing-abs')">abs</a>]
+                    [<a href="./paper/Assessing.pdf">pdf</a>]
+                    <div id="Assessing-abs" style="display:none">
+                        <p>
+                            The increasing application of machine learning techniques in everyday decision-making processes has brought concerns about the fairness of algorithmic decision-making. This paper concerns the problem of collider bias which produces spurious associations in fairness assessment and develops theorems to guide fairness assessment avoiding the collider bias. We consider a real-world application of auditing a trained classifier by an audit agency. We propose an unbiased assessment algorithm by utilising the developed theorems to reduce collider biases in the assessment. Experiments and simulations show the proposed algorithm reduces collider biases significantly in the assessment and is promising in auditing trained classifiers.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="pubs_selected" style="display:none">
+            </div>
+
+            <div id="pubs_all" style="display:none">
+            </div>
+        </h4>
+
+
+        <span id="teaching" name="teaching">
+            <h3> Teaching </h3>
+        </span>
+        <table class="table table-hover">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Study Period</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Academic Units</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>SP 1 2023</td>
+                    <td><a href="https://online.unisa.edu.au/courses/163541/2023">COMP1043 - UO Problem Solving and Programming</a>
+                    </td>
+                    <td>Unisa Online</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>SP 2 2023</td>
+                    <td><a href="https://study.unisa.edu.au/courses/012517/2023">INFS2011 - Database for the Enterprise</a>
+                    </td>
+                    <td>Unisa STEM</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>SP 3 2023</td>
+                    <td><a href="https://online.unisa.edu.au/courses/163541/2023">INFS3089 - UO Text and Social Media Analytics</a>
+                    </td>
+                    <td>Unisa Online</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td>SP 3 2023</td>
+                    <td><a href="https://online.unisa.edu.au/courses/171433/2023">INFT3046 - UO Machine Learning</a>
+                    </td>
+                    <td>Unisa Online</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>SP 4 2023</td>
+                    <td><a href="https://online.unisa.edu.au/courses/163541/2023">COMP1043 - UO Problem Solving and Programming</a>
+                    </td>
+                    <td>Unisa Online</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>SP 5 2023</td>
+                    <td><a href="https://study.unisa.edu.au/courses/154341/2023">INFS4019 - Relational Databases and Warehouses</a>
+                    </td>
+                    <td>Unisa STEM</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>SP 6 2023</td>
+                    <td><a href="https://online.unisa.edu.au/courses/163541/2023">COMP1043 - UO Problem Solving and Programming</a>
+                    </td>
+                    <td>Unisa Online</td>
+                </tr>
+            </tbody>    
+
+            <tbody>
+                <tr>
+                    <td>SP 6 2023</td>
+                    <td><a href="https://online.unisa.edu.au/courses/164145/2023">INFS3081 - UO Predictive Analytics</a>
+                    </td>
+                    <td>Unisa Online</td>
+                </tr>
+            </tbody>        
+        </table>
+
+<!--         <span name="service" id="service">
+            <h3> Service </h3>
+        </span>
+        <table class="table table-hover">
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+        </table> -->
+
+<!--         <span name="misc" id="misc">
+            <h3> Misc </h3>
+        </span>
+        <table class="table table-hover">
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+        </table> -->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Last updated by Ziqi Xu, Mar. 2024.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="./index_files/bootstrap.min.js"></script>
+    <script src="./js/ziqi.js"></script>
+    <script type="text/javascript">
+        var is_selected = true;
+        $("#pub-by-selected").click();
+    </script>
+</body>
+
+</html>
