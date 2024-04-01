@@ -43,7 +43,10 @@
     </script>
 </head>
 
+
 <body data-feedly-mini="yes">
+
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=dddddd&w=450&t=n&d=erecJ92Hf11cKbSCSQtOlqHdENLQx1ZSQP3uX8tGl54&co=3f9cdd&cmo=1be220&cmn=ff5353&ct=ffffff'></script>
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -64,6 +67,7 @@
                     <li><a href="#teaching">Teaching</a></li>
                     <li><a href="#service">Academic Services</a></li>
                     <li><a href="#awards">Awards</a></li>
+                    <!-- <li><a href="#misc">Misc</a></li> -->
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -85,6 +89,8 @@
                     <!-- [<a href="">Curriculum Vitae</a>]  -->
                     [<a href="https://scholar.google.com.au/citations?user=znODztEAAAAJ&hl=en">Google Scholar</a>]
                     [<a href="https://www.linkedin.com/in/ziqi-xu-846510113/">LinkedIn</a>]
+                    [<a href="https://people.csiro.au/x/z/ziqi-xu">CSIRO</a>]
+                    [<a href="https://people.unisa.edu.au/Ziqi.Xu">UniSA</a>]
                     <!-- [<a href="">DBLP</a>] -->
                     <!-- [<a href="">Thesis</a>] -->
                 </address>
@@ -306,7 +312,7 @@
             <tbody>
                 <tr>
                     <td><a href="https://online.unisa.edu.au/courses/171433">INFT 3046 - UO Machine Learning</a></td>
-                    <td>SP3 2023</td>
+                    <td>SP3 2023 | SP3 2024</td>
                     <td>Unisa Online</td>
                 </tr>
             </tbody>
@@ -323,7 +329,7 @@
             <tbody>
                 <tr>
                     <td><a href="https://online.unisa.edu.au/courses/164145">INFS 3081 - UO Predictive Analytics</a></td>
-                    <td>SP6 2023</td>
+                    <td>SP6 2023 | SP3 2024</td>
                     <td>Unisa Online</td>
                 </tr>
             </tbody>  
@@ -395,7 +401,7 @@
                 <tr>
                     <td>China National Petroleum Corporation (CNPC) Scholarship</td>
                     <td>2015</td>
-                    <td>CNPC</td>
+                    <td>China National Petroleum Corporation</td>
                 </tr>
             </tbody>
         </table>  
@@ -409,6 +415,14 @@
                     <td>Program Committee Member</td>
                     <td>European Conference on Machine Learning and Knowledge Discovery in Databases</td>
                     <td><a href="https://2024.ecmlpkdd.org/">ECML-PKDD 2024</a></td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>Program Committee Member</td>
+                    <td>Conference on Uncertainty in Artificial Intelligence</td>
+                    <td><a href="https://www.auai.org/uai2024/">UAI 2024</a></td>
                 </tr>
             </tbody>
 
@@ -429,28 +443,6 @@
             </tbody>
         </table> 
 
-
-<!--         <span name="service" id="service">
-            <h3> Service </h3>
-        </span>
-        <table class="table table-hover">
-            <tr>
-                <td>
-
-                </td>
-            </tr>
-        </table> -->
-
-<!--         <span name="misc" id="misc">
-            <h3> Misc </h3>
-        </span>
-        <table class="table table-hover">
-            <tr>
-                <td>
-
-                </td>
-            </tr>
-        </table> -->
     </div>
     <footer class="footer">
         <div class="container">
@@ -467,6 +459,33 @@
     <script type="text/javascript">
         var is_selected = true;
         $("#pub-by-selected").click();
+        window.onload=function(){
+            var oDiv=document.getElementById('div1');
+            var oUl=oDiv.getElementsByTagName('ul')[0];
+            var aLi=oUl.getElementsByTagName('li');
+            var timer=null;
+            var iSpeed=2;
+            oUl.innerHTML+=oUl.innerHTML;//定义图片可以循环播放
+            oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';//定义外层ul的宽度，根据图片的个数和每个图片的宽度计算，保证总宽度是可调整的
+            function fnMove(){
+                if(oUl.offsetLeft<-oUl.offsetWidth/2){
+                    oUl.style.left=0;
+                }else if(oUl.offsetLeft>0){
+                    oUl.style.left=-oUl.offsetWidth/2+'px';
+                }//定义到边界的时候，实现无缝衔接
+                oUl.style.left=oUl.offsetLeft+iSpeed+'px';
+            //定义图片的右边距随着速度不断不断增加，或减小，实现运动的效果
+            }
+            timer=setInterval(fnMove,30);
+            oDiv.onmouseover=function(){
+                clearInterval(timer);
+            //鼠标移动到图片上，清除定时器，停止运动
+            }
+            oDiv.onmouseout=function(){
+                timer=setInterval(fnMove,30);
+            //鼠标移出，重新开启定时器，重新运动
+            }
+        };
     </script>
 </body>
 
