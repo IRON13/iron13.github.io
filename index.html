@@ -81,9 +81,9 @@
                     <br> <a href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>
                     <br> <a href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation</a> (CSIRO)
                     <br> Email: ziqi.xu@data61.csiro.au | ziqi.xu@mymail.unisa.edu.au | ziqi.xu@unisa.edu.au</a>
-                    <br> Office: Data 61, Research Way, Clayton Vic 3168
+                    <br> Office: Data 61, Research Way, Clayton VIC 3168
                     <br> 
-                    <!-- [<a href="">Curriculum Vitae</a>]  -->
+                    [<a href="https://github.com/IRON13/Resume_ZiqiXu">Resume</a>] 
                     [<a href="https://scholar.google.com.au/citations?user=znODztEAAAAJ&hl=en">Google Scholar</a>]
                     [<a href="https://www.linkedin.com/in/ziqi-xu-846510113/">LinkedIn</a>]
                     [<a href="https://people.csiro.au/x/z/ziqi-xu">CSIRO</a>]
@@ -103,11 +103,7 @@
         <table class="table table-hover">
             <p style="top-margin: 100px"></p>
             <td style="text-align: justify;">
-                I am a CERC Fellow at the <a href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>, <a href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</a>. I obtained my Ph.D. from the <a href="https://www.unisa.edu.au/about-unisa/academic-units/stem/">STEM</a>,
-                <a href="https://www.unisa.edu.au/">University of South Australia</a>, where I was supervised by <a
-                    href="https://people.unisa.edu.au/jiuyong.li">Jiuyong Li</a>. During my Ph.D., I have also been closely
-                working with <a href="https://people.unisa.edu.au/jixue.liu">Jixue Liu</a> and <a href="https://people.unisa.edu.au/lin.liu">Lin Liu</a>. Previously, I
-                obtained my Master's degree from the <a href="https://set.adelaide.edu.au/computer-and-mathematical-sciences/">School of Computer and Mathematical Sciences</a> at <a href="https://www.adelaide.edu.au/">The University of Adelaide</a>. My research interests are broadly in data mining and machine learning, with a particular focus on causal inference, and fairness. 
+                I am a CERC Fellow at the <a href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>, <a href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</a>. I am working with Dr. <a href="https://sevvandi.netlify.app/">Sevvandi Kandanaarachchi</a> in the Analytics and Decision Sciences Group. I obtained my Ph.D. from the <a href="https://www.unisa.edu.au/about-unisa/academic-units/stem/">STEM</a>, <a href="https://www.unisa.edu.au/">University of South Australia</a>, where I was supervised by Prof. <a href="https://people.unisa.edu.au/jiuyong.li">Jiuyong Li</a>. During my Ph.D., I also worked closely with A/Prof. <a href="https://people.unisa.edu.au/jixue.liu">Jixue Liu</a> and Prof. <a href="https://people.unisa.edu.au/lin.liu">Lin Liu</a>. Previously, I obtained my Master's degree from the <a href="https://set.adelaide.edu.au/computer-and-mathematical-sciences/">School of Computer and Mathematical Sciences</a> at <a href="https://www.adelaide.edu.au/">The University of Adelaide</a>, where I was supervised by Dr. <a href="https://researchers.adelaide.edu.au/profile/wei.e.zhang">Wei Zhang</a>. My research interests are broadly in data mining and machine learning, with a particular focus on causal inference, and fairness. 
             </td>
         </table>
 
@@ -445,7 +441,7 @@
         <div class="container">
             <p class="text-muted">Last updated by Ziqi Xu, Mar. 2024.</p>
         </div>
-        <div class="container" style="text-align: center; padding-top: 15px;">
+        <div class="container" style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
             <a href="https://clustrmaps.com/site/1bz2o" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=450&t=n&d=erecJ92Hf11cKbSCSQtOlqHdENLQx1ZSQP3uX8tGl54&co=2d78ad&ct=ffffff" /></a>
         </div>
     </footer>
@@ -456,37 +452,6 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     <script src="./index_files/bootstrap.min.js"></script>
     <script src="./js/ziqi.js"></script>
-    <script type="text/javascript">
-        var is_selected = true;
-        $("#pub-by-selected").click();
-        window.onload=function(){
-            var oDiv=document.getElementById('div1');
-            var oUl=oDiv.getElementsByTagName('ul')[0];
-            var aLi=oUl.getElementsByTagName('li');
-            var timer=null;
-            var iSpeed=2;
-            oUl.innerHTML+=oUl.innerHTML;//定义图片可以循环播放
-            oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';//定义外层ul的宽度，根据图片的个数和每个图片的宽度计算，保证总宽度是可调整的
-            function fnMove(){
-                if(oUl.offsetLeft<-oUl.offsetWidth/2){
-                    oUl.style.left=0;
-                }else if(oUl.offsetLeft>0){
-                    oUl.style.left=-oUl.offsetWidth/2+'px';
-                }//定义到边界的时候，实现无缝衔接
-                oUl.style.left=oUl.offsetLeft+iSpeed+'px';
-            //定义图片的右边距随着速度不断不断增加，或减小，实现运动的效果
-            }
-            timer=setInterval(fnMove,30);
-            oDiv.onmouseover=function(){
-                clearInterval(timer);
-            //鼠标移动到图片上，清除定时器，停止运动
-            }
-            oDiv.onmouseout=function(){
-                timer=setInterval(fnMove,30);
-            //鼠标移出，重新开启定时器，重新运动
-            }
-        };
-    </script>
 </body>
 
 </html>
