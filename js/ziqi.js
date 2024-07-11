@@ -20,7 +20,7 @@ function load_selected() {
     causalinference: "",
   };
   var topics = {
-    causalinference: "Causal Inference (Instrumental Variable / Front-door Adjustment / Mediation Analysis)",
+    causalinference: "Causal Inference",
     fairness: "Fairness"
   };
   // Iterate through all the topics.
