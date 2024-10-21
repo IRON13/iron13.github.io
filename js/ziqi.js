@@ -25,7 +25,7 @@ function load_selected() {
   };
   // Iterate through all the topics.
   for (let k in topics) {
-    topics_html[k] += "<h4 style='color: #007adc;'>" + topics[k] + "</h4>";
+    topics_html[k] += "<h4 style='color: #0B0A55;'>" + topics[k] + "</h4>";
     topics_html[k] += '<table class="table table-hover">';
   }
 

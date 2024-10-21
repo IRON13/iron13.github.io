@@ -24,24 +24,24 @@ html {
 .navbar .nav > li.current-menu-item > a, 
 .navbar .nav > li.current-menu-ancestor > a {
     font-size:      1.1em;
-    color: #007adc;
+    color: #0B0A55;
 }
 
 .navbar-default .navbar-brand {
-  color: #007adc ;
+  color: #0B0A55 ;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
   color: #333;
 }
 
-bg-primary:hover{background-color:#007adc}
+bg-primary:hover{background-color:#0B0A55}
 
 .navbar .nav > li.dropdown.open.active > a:hover, 
 .navbar .nav > li.dropdown.open > a {
     color: #fff;
     /* background-color: #297ACC; */
-    background-color:#007adc;
+    background-color:#0B0A55;
     border-color: #fff;
 }
 
@@ -62,7 +62,7 @@ bg-primary:hover{background-color:#007adc}
 .dropdown-menu li>a:hover {
     color: #fff;
     /* background-color: #297ACC; */
-    background-color:#007adc;
+    background-color:#0B0A55;
     border-color: #fff;
 }
 
