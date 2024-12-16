@@ -18,10 +18,12 @@ function load_selected() {
   var topics_html = {
     fairness: "",
     causalinference: "",
+    application: ""
   };
   var topics = {
     causalinference: "Causal Inference",
-    fairness: "Fairness"
+    fairness: "Fairness",
+    application: "Application"
   };
   // Iterate through all the topics.
   for (let k in topics) {
@@ -44,6 +46,7 @@ function load_selected() {
   }
   html += topics_html["causalinference"];
   html += topics_html["fairness"];
+  html += topics_html["Application"];
   // Add the html string to the page.
   html += "</table>";
   $("#pubs_selected").append(html);
