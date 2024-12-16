@@ -12,7 +12,7 @@
 
 function load_selected() {
   var papers = $("#all-papers-container .pubs");
-  $("#pubs_selected").html("");
+  $("#pub-by-date"").html("");
   var html = "";
   // Map each topic to a html string.
   var topics_html = {
