@@ -35,9 +35,9 @@
                 document.getElementById(id).style.display = "none";
             }
             if (is_selected == true) {
-                $("#pub-by-selected").click();
-            } else {
                 $("#pub-by-date").click();
+            } else {
+                $("#pub-by-selected").click();
             }
         }
     </script>
@@ -114,10 +114,10 @@
         <h4 id="publication" name="publication">
             <h3> Publications
                 [
-                <a href="" id="pub-by-selected" style="text-decoration: underline; color: rgb(0, 0, 0);">show
-                    by topic</a>
+                <a href="" id="pub-by-date" style="text-decoration: underline; color: rgb(0, 0, 0);">show
+                    by date</a>
                 /
-                <a href="" id="pub-by-date">show by date</a>
+                <a href="" id="pub-by-selected">show by topic</a>
                 ]
             </h3>
             <h5>
@@ -125,6 +125,34 @@
             </h5>
 
             <div id="all-papers-container" style="display:none">
+                <div class="pubs" paper-year="2024" paper-select="true" topic="causalinference">
+                    <strong>[J01] Disentangled Representation Learning for Causal Inference With Instruments </strong>
+                    <br> Debo Cheng, Jiuyong Li, Lin Liu, <b>Ziqi Xu</b>, Weijia Zhang, Jixue Liu and Thuc Duy Le 
+                    <br> IEEE Transactions on Neural Networks and Learning Systems (<b>TNNLS</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DIV.VAE-abs')">Abstract</a>]
+                    [<a href="./paper/DIV.VAE.pdf">PDF</a>]
+                    <div id="DIV.VAE-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            Latent confounders are a fundamental challenge for inferring causal effects from observational data. The instrumental variable (IV) approach is a practical way to address this challenge. Existing IV-based estimators need a known IV or other strong assumptions, such as the existence of two or more IVs in the system, which limits the application of the IV approach. In this article, we consider a relaxed requirement, which assumes there is an IV proxy in the system without knowing which variable is the proxy. We propose a variational autoencoder (VAE)-based disentangled representation learning method to learn an IV representation from a dataset with latent confounders and then utilize the IV representation to obtain an unbiased estimation of the causal effect from the data. Extensive experiments on synthetic and real-world data have demonstrated that the proposed algorithm outperforms the existing IV-based estimators and VAE-based estimators.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="pubs" paper-year="2024" paper-select="true" topic="application">
+                    <strong>[C11] TSI: A Multi-view Representation Learning Approach for Time Series Forecasting </strong>
+                    <br> Wentao Gao, <b>Ziqi Xu</b>, Jiuyong Li, Lin Liu, Jixue Liu, Thuc Duy Le, Debo Cheng, Yanchang Zhao and Yun Chen 
+                    <br> In Proceedings of the Australasian Joint Conference on Artificial Intelligence (<b>AJCAI 2024</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('TSI-abs')">Abstract</a>]
+                    [<a href="./paper/TSI.pdf">PDF</a>]
+                    <div id="TSI-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            As the growing demand for long sequence time-series forecasting in real-world applications, such as electricity consumption planning, the significance of time series forecasting becomes increasingly crucial across various domains. This is highlighted by recent advancements in representation learning within the field. This study introduces a novel multi-view approach for time series forecasting that innovatively integrates trend and seasonal representations with an Independent Component Analysis (ICA)-based representation. Recognizing the limitations of existing methods in representing complex and high-dimensional time series data, this research addresses the challenge by combining TS (trend and seasonality) and ICA (independent components) perspectives. This approach offers a holistic understanding of time series data, going beyond traditional models that often miss nuanced, nonlinear relationships. The efficacy of TSI model is demonstrated through comprehensive testing on various benchmark datasets, where it shows superior performance over current state-of-the-art models, particularly in multivariate forecasting. This method not only enhances the accuracy of forecasting but also contributes significantly to the field by providing a more in-depth understanding of time series data. The research which uses ICA for a view lays the groundwork for further exploration and methodological advancements in time series forecasting, opening new avenues for research and practical applications.
+                        </p>
+                    </div>
+                </div>
+
+
                 <div class="pubs" paper-year="2024" paper-select="true" topic="causalinference">
                     <strong>[C10] Causal Inference with Conditional Front-Door Adjustment and Identifiable Variational Autoencoder </strong>
                     <br> <b>Ziqi Xu</b>, Debo Cheng, Jiuyong Li, Jixue Liu, Lin Liu, and Kui Yu
@@ -275,6 +303,30 @@
             <h3> Academic Services </h3>
         </span>
         <table class="table table-hover">
+            <tbody>
+                <tr>
+                    <td>Program Committee Member</td>
+                    <td>The International Conference on Machine Learning </td>
+                    <td><a href="https://pakdd2025.org/">ICML 2025</a></td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>Program Committee Member</td>
+                    <td>The Pacific-Asia Conference on Knowledge Discovery and Data Mining </td>
+                    <td><a href="https://pakdd2025.org/">PAKDD 2025</a></td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>Program Committee Member</td>
+                    <td>The Web Conference</td>
+                    <td><a href="https://www2025.thewebconf.org/">WWW 2025</a></td>
+                </tr>
+            </tbody>
+
             <tbody>
                 <tr>
                     <td>Program Committee Member</td>
@@ -490,7 +542,7 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <p class="text-muted">Last updated by Ziqi Xu, Mar. 2024.</p>
+            <p class="text-muted">Last updated by Ziqi Xu, Dec. 2024.</p>
         </div>
         <div class="container" style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
             <a href="https://clustrmaps.com/site/1bz2o" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=450&t=n&d=erecJ92Hf11cKbSCSQtOlqHdENLQx1ZSQP3uX8tGl54&co=2d78ad&ct=ffffff" /></a>
