@@ -11,7 +11,7 @@
     <meta name="description" content="Homepage">
     <meta name="author" content="Ziqi Xu">
     <meta name="keywords"
-        content="Ziqi Xu RMIT CSIRO Data 61 University of South Australia The University of Adelaide">
+        content="Ziqi Xu RMIT Royal Melbourne Institute of Technology CSIRO Data 61 University of South Australia The University of Adelaide">
 
     <title>Ziqi Xu's Homepage</title>
 
@@ -26,18 +26,29 @@
     <link href="./css/ziqi.css" rel="stylesheet">
     <script src="./index_files/ie-emulation-modes-warning.js"></script>
     <script type="text/javascript">
+        // 全局变量控制当前的选择状态
+        var is_selected = false; // 初始状态为 "by date"
+
+        // 页面加载时的初始化函数
+        window.onload = function () {
+            // 默认触发 "by date" 按钮的点击事件
+            $("#pub-by-date").click();
+        };
+
         function display(id) {
+            // 切换元素的显示状态
             var currentDisplay = document.getElementById(id).style.display;
             if (currentDisplay == 'none') {
                 document.getElementById(id).style.display = "inline";
-            }
-            else {
+            } else {
                 document.getElementById(id).style.display = "none";
             }
-            if (is_selected == true) {
-                $("#pub-by-date").click();
-            } else {
+
+            // 根据当前状态决定触发的按钮
+            if (is_selected) {
                 $("#pub-by-selected").click();
+            } else {
+                $("#pub-by-date").click();
             }
         }
     </script>
@@ -81,15 +92,15 @@
                     <br> <a href="https://www.rmit.edu.au/about/schools-colleges/computing-technologies">School of Computing Technologies</a>
                     <br> <a href="https://www.rmit.edu.au/">RMIT University</a>
                     <!-- <br> Email: ziqi.xu@data61.csiro.au | ziqi.xu@mymail.unisa.edu.au | ziqi.xu@unisa.edu.au -->
-                    <br> Email: ziqi.xu@rmit.edu.au | ziqi.xu@mymail.unisa.edu.au
+                    <br> Email: ziqi.xu@rmit.edu.au
                     <br> Office: Building 14, 414-418 Swanston St, Melbourne VIC 3000
                     <br> 
                     <!-- [<a href="./paper/Resume_ZiqiXu.pdf">Resume</a>]  -->
                     [<a href="https://scholar.google.com.au/citations?user=znODztEAAAAJ&hl=en">Google Scholar</a>]
                     [<a href="https://www.linkedin.com/in/ziqi-xu-846510113/">LinkedIn</a>]
-                    <!-- [<a href="https://people.csiro.au/x/z/ziqi-xu">CSIRO</a>] -->
-                    <!-- [<a href="https://people.unisa.edu.au/Ziqi.Xu">UniSA</a>] -->
-                    <!-- [<a href="">DBLP</a>] -->
+                    [<a href="https://www.rmit.edu.au/profiles/x/ziqi-xu">RMIT</a>]
+                    [<a href="https://dblp.org/pid/255/6518-1.html">DBLP</a>]
+                    [<a href="https://find.library.unisa.edu.au/discovery/delivery/61USOUTHAUS_INST:UNISA/12290010410001831">Thesis</a>]
                     <!-- [<a href="">Thesis</a>] -->
                 </address>
             </div>
@@ -125,6 +136,47 @@
             </h5>
 
             <div id="all-papers-container" style="display:none">
+                <div class="pubs" paper-year="2025" paper-select="true" topic="fairness">
+                    <strong>[C14] Towards Better Evaluation of Recommendation Algorithms with Bi-directional Item Response Theory </strong>
+                    <br> <b>Ziqi Xu</b>, Chenglong Ma, Yongli Ren, Jeffrey Chan, Wei Shao and Feng Xia
+                    <br> In Proceedings of the ACM Web Conference (<b>WWW 2025</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('BiReIRT-abs')">Abstract</a>]
+                    [<a href="./paper/BiReIRT.pdf">PDF</a>]
+                    <div id="BiReIRT-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            Recommendation algorithms are typically evaluated on various datasets and compared against other algorithms employing diverse strategies. However, current evaluation practices predominantly rely on rank-based metrics, focusing solely on performance outcomes while overlooking the latent traits of datasets and recommendation algorithms. In this paper, we propose a bi-directional Item Response Theory (Bi-ReIRT) framework, which offers a fine-grained evaluation by simultaneously modelling the latent traits of recommendation algorithms (i.e., their ability) and datasets (i.e., their inherent challenges). This is the first work to apply the IRT framework for evaluating recommendation algorithms on the dataset level. The Bi-ReIRT framework enables visualisations of algorithms' performance across datasets with varying levels of inherent challenge. We conduct extensive experiments across a portfolio of recommendation algorithms and datasets, exploring the implications of key IRT parameters such as discrimination, difficulty, and ability. Moreover, the interpretability of these parameters provides deeper insights into the characteristics of both recommendation algorithms and datasets.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="pubs" paper-year="2025" paper-select="true" topic="fairness">
+                    <strong>[C13] Fairness Evaluation with Item Response Theory </strong>
+                    <br> <b>Ziqi Xu</b>, Sevvandi Kandanaarachchi, Cheng Soon Ong and Eirini Ntoutsi
+                    <br> In Proceedings of the ACM Web Conference (<b>WWW 2025</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('FairIRT-abs')">Abstract</a>]
+                    [<a href="./paper/FairIRT.pdf">PDF</a>]
+                    <div id="FairIRT-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            Item Response Theory (IRT) has been widely used in educational psychometrics to assess student ability, as well as the difficulty and discrimination of test questions. In this context, discrimination specifically refers to how effectively a question distinguishes between students of different ability levels, and it does not carry any connotation related to fairness. In recent years, IRT has been successfully used to evaluate the predictive performance of Machine Learning (ML) models, but this paper marks its first application in fairness evaluation. In this paper, we propose a novel Fair-IRT framework to evaluate a set of predictive models on a set of individuals, while simultaneously eliciting specific parameters, namely, the ability to make fair predictions (a feature of predictive models), as well as the discrimination and difficulty of individuals that affect the prediction results. Furthermore, we conduct a series of experiments to comprehensively understand the implications of these parameters for fairness evaluation. Detailed explanations for item characteristic curves (ICCs) are provided for particular individuals. We propose the flatness of ICCs to disentangle the unfairness between individuals and predictive models. The experiments demonstrate the effectiveness of this framework as a fairness evaluation tool. Two real-world case studies illustrate its potential application in evaluating fairness in both classification and regression tasks. Our paper aligns well with the Responsible Web track by proposing a Fair-IRT framework to evaluate fairness in ML models, which directly contributes to the development of a more inclusive, equitable, and trustworthy AI.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="pubs" paper-year="2025" paper-select="true" topic="application">
+                    <strong>[C12] Off-policy Evaluation for Multiple Actions in the Presence of Unobserved Confounders </strong>
+                    <br> Haolin Wang, Lin Liu, Jiuyong Li, <b>Ziqi Xu</b>, Jixue Liu, Zehong Cao and Debo Cheng
+                    <br> In Proceedings of the ACM Web Conference (<b>WWW 2025</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('policy-abs')">Abstract</a>]
+                    [<a href="./paper/policy.pdf">PDF</a>]
+                    <div id="policy-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            Off-policy evaluation (OPE) is a crucial problem in reinforcement learning (RL), where the goal is to estimate the long-term cumulative reward of a target policy using historical data generated by a potentially different behaviour policy. In many real-world applications, such as precision medicine and recommendation systems, unobserved confounders may influence the action, reward, and state transition dynamics, which leads to biased estimates if not properly addressed. While existing methods for handling unobserved confounders in OPE focus on single-action settings, they are less effective in multi-action scenarios commonly found in practical applications, where an agent can take multiple actions simultaneously. In this paper, we propose a novel auxiliary variable-aided method for OPE in multi-action settings with unobserved confounders. Our approach overcomes the limitations of traditional auxiliary variable methods for multi-action scenarios by requiring only a single auxiliary variable, relaxing the need for as many auxiliary variables as the actions. Through theoretical analysis, we prove that our method provides an unbiased estimation of the target policy value. Empirical evaluations demonstrate that our estimator achieves better performance compared to existing baseline methods, highlighting its effectiveness and reliability in addressing unobserved confounders in multi-action OPE settings.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="pubs" paper-year="2024" paper-select="true" topic="causalinference">
                     <strong>[J01] Disentangled Representation Learning for Causal Inference with Instruments </strong>
                     <br> Debo Cheng, Jiuyong Li, Lin Liu, <b>Ziqi Xu</b>, Weijia Zhang, Jixue Liu and Thuc Duy Le 
@@ -542,7 +594,7 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <p class="text-muted">Last updated by Ziqi Xu, Dec. 2024.</p>
+            <p class="text-muted">Last updated by Ziqi Xu, Jan. 2025.</p>
         </div>
         <div class="container" style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
             <a href="https://clustrmaps.com/site/1bz2o" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=450&t=n&d=erecJ92Hf11cKbSCSQtOlqHdENLQx1ZSQP3uX8tGl54&co=2d78ad&ct=ffffff" /></a>
@@ -555,10 +607,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     <script src="./index_files/bootstrap.min.js"></script>
     <script src="./js/ziqi.js"></script>
-        <script type="text/javascript">
-        var is_selected = true;
-        $("#pub-by-date").click();
-    </script>
+    <script type="text/javascript"></script>
 </body>
 
 </html>
