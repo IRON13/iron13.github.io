@@ -23,7 +23,7 @@ function load_selected() {
   var topics = {
     causalinference: "Causality",
     fairness: "Fairness",
-    application: "Application",
+    application: "Causality for X",
   };
   // Iterate through all the topics.
   for (let k in topics) {
