@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +23,7 @@
 
     <!-- Customize CSS -->
     <link href="./css/ziqi.css" rel="stylesheet">
-    <script src="./index_files/ie-emulation-modes-warning.js"></script>
+        
     <script type="text/javascript">
         // 全局变量控制当前的选择状态
         var is_selected = false; // 初始状态为 "by date"
@@ -32,7 +31,7 @@
         // 页面加载时的初始化函数
         window.onload = function () {
             // 默认触发 "by date" 按钮的点击事件
-            $("#pub-by-selected").click();
+            document.getElementById("pub-by-date").click();
         };
 
         function display(id) {
@@ -46,9 +45,9 @@
 
             // 根据当前状态决定触发的按钮
             if (is_selected) {
-                $("#pub-by-selected").click();
+                document.getElementById("pub-by-selected").click();
             } else {
-                $("#pub-by-date").click();
+                document.getElementById("pub-by-date").click();
             }
         }
     </script>
@@ -73,7 +72,7 @@
                     <li><a href="#publication">Publications</a></li>
                     <!-- <li><a href="#people">People</a></li> -->
                     <li><a href="#teaching">Teaching</a></li>
-                    <li><a href="#service">Academic Services</a></li>
+                    <!-- <li><a href="#service">Academic Services</a></li> -->
                     <li><a href="#awards">Awards</a></li>
                     <!-- <li><a href="#misc">Misc</a></li> -->
                 </ul>
@@ -89,23 +88,25 @@
                 <h1>Ziqi Xu | 徐梓淇 </h1>
                 <address>
                     <br> Lecturer in Data Science and Artificial Intelligence
-                    <br> <a href="https://www.rmit.edu.au/about/schools-colleges/computing-technologies">School of Computing Technologies</a>
+                    <br> <a href="https://www.rmit.edu.au/about/schools-colleges/computing-technologies">School of
+                        Computing Technologies</a>
                     <br> <a href="https://www.rmit.edu.au/">RMIT University</a>
                     <!-- <br> Email: ziqi.xu@data61.csiro.au | ziqi.xu@mymail.unisa.edu.au | ziqi.xu@unisa.edu.au -->
                     <br> Email: ziqi.xu@rmit.edu.au
                     <br> Office: Building 14, 414-418 Swanston St, Melbourne VIC 3000
-                    <br> 
+                    <br>
                     <!-- [<a href="./paper/Resume_ZiqiXu.pdf">Resume</a>]  -->
                     [<a href="https://scholar.google.com.au/citations?user=znODztEAAAAJ&hl=en">Google Scholar</a>]
                     [<a href="https://www.linkedin.com/in/ziqi-xu-846510113/">LinkedIn</a>]
                     [<a href="https://www.rmit.edu.au/profiles/x/ziqi-xu">RMIT</a>]
                     [<a href="https://dblp.org/pid/255/6518-1.html">DBLP</a>]
-                    [<a href="https://find.library.unisa.edu.au/discovery/delivery/61USOUTHAUS_INST:UNISA/12290010410001831">Thesis</a>]
+                    [<a
+                        href="https://find.library.unisa.edu.au/discovery/delivery/61USOUTHAUS_INST:UNISA/12290010410001831">Thesis</a>]
                     <!-- [<a href="">Thesis</a>] -->
                 </address>
             </div>
             <div class="col-md-4">
-                <img src="./images/ziqi.jpg" class="img_responsive">
+                <img height="400" width="320" decoding="async" loading="lazy" src="./images/ziqi.jpg" class="img_responsive img-responsive">
             </div>
         </div>
 
@@ -115,7 +116,19 @@
         <table class="table table-hover">
             <p style="top-margin: 100px"></p>
             <td style="text-align: justify;">
-                I am a Lecturer in Data Science and Artificial Intelligence at the School of Computing and Technologies, RMIT University. Before joining RMIT, I was a CERC Fellow at <a href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>, <a href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</a>. I obtained my Ph.D. from <a href="https://www.unisa.edu.au/about-unisa/academic-units/stem/">STEM</a> at the <a href="https://www.unisa.edu.au/">University of South Australia</a>. Previously, I obtained my Master’s degree from the <a href="https://set.adelaide.edu.au/computer-and-mathematical-sciences/">School of Computer and Mathematical Sciences</a> at <a href="https://www.adelaide.edu.au/">The University of Adelaide</a>. I have a broad interest in Responsible AI, particularly in causal inference, fairness, and explainable AI. My long-term goal is to build machine learning systems that are efficient, robust, fair, and interpretable.
+                I am a Lecturer in Data Science and Artificial Intelligence at the School of Computing and Technologies,
+                RMIT University. Before joining RMIT, I was a CERC Fellow at <a
+                    href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>, <a
+                    href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation
+                    (CSIRO)</a>. I obtained my Ph.D. from <a
+                    href="https://www.unisa.edu.au/about-unisa/academic-units/stem/">STEM</a> at the <a
+                    href="https://www.unisa.edu.au/">University of South Australia</a>. Previously, I obtained my
+                Master’s degree from the <a
+                    href="https://set.adelaide.edu.au/computer-and-mathematical-sciences/">School of Computer and
+                    Mathematical Sciences</a> at <a href="https://www.adelaide.edu.au/">The University of Adelaide</a>.
+                I have a broad interest in Responsible AI, particularly in causal inference, fairness, and explainable
+                AI. My long-term goal is to build machine learning systems that are efficient, robust, fair, and
+                interpretable.
 
 
                 <!-- I am a CERC Fellow at the <a href="https://www.csiro.au/en/about/people/business-units/data61">Data 61</a>, <a href="https://www.csiro.au/en/">Commonwealth Scientific and Industrial Research Organisation (CSIRO)</a>. I am working with Dr. <a href="https://sevvandi.netlify.app/">Sevvandi Kandanaarachchi</a> in the Analytics and Decision Sciences Program. I obtained my Ph.D. from the <a href="https://www.unisa.edu.au/about-unisa/academic-units/stem/">STEM</a>, <a href="https://www.unisa.edu.au/">University of South Australia</a>, where I was supervised by Prof. <a href="https://people.unisa.edu.au/jiuyong.li">Jiuyong Li</a>. During my Ph.D., I also worked closely with A/Prof. <a href="https://people.unisa.edu.au/jixue.liu">Jixue Liu</a> and Prof. <a href="https://people.unisa.edu.au/lin.liu">Lin Liu</a>. Previously, I obtained my Master's degree from the <a href="https://set.adelaide.edu.au/computer-and-mathematical-sciences/">School of Computer and Mathematical Sciences</a> at <a href="https://www.adelaide.edu.au/">The University of Adelaide</a>, where I was supervised by Dr. <a href="https://researchers.adelaide.edu.au/profile/wei.e.zhang">Wei Zhang</a>. My research interests are broadly in data mining and machine learning, with a particular focus on causal inference, and fairness.  -->
@@ -125,38 +138,146 @@
         <h4 id="publication" name="publication">
             <h3> Publications
                 [
-                <a href="" id="pub-by-selected">show selected</a> / 
+                <!-- <a href="" id="pub-by-selected">show selected</a> / -->
                 <a href="" id="pub-by-date" style="text-decoration: underline; color: rgb(0, 0, 0);">show
                     by date</a>
                 ]
             </h3>
-            <h5>
-                (* denotes equal contribution)
-            </h5>
 
             <div id="all-papers-container" style="display:none">
                 <div class="pubs" paper-year="2025" paper-select="true" topic="">
-                    <strong>[C15] PUB: An LLM-Enhanced Personality-Driven User Behaviour Simulator for Recommender System Evaluation </strong>
+                    <strong>[C17] Cultural Bias Matters: A Cross-Cultural Benchmark Dataset and Sentiment-Enriched Model for Understanding Multimodal Metaphors </strong>
+                    <br> Senqi Yang, Dongyu Zhang, Jing Ren, <b>Ziqi Xu</b>, Xiuzhen Zhang, Yiliao Song, Hongfei Lin and Feng Xia [<b>Corresponding Author</b>]
+                    <br> In Proceedings of the Annual Meeting of the Association for Computational Linguistics (<b>ACL 2025</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('C17')">Abstract</a>]
+                    [<a href="./paper/C17.pdf">PDF</a>]
+                    <div id="C17" style="display:none">
+                        <p style="text-align: justify;">
+                            Metaphors are pervasive in communication, making them crucial for natural language processing (NLP). Previous research on automatic metaphor processing predominantly relies on training data consisting of English samples, which often reflect Western European or North American biases. This cultural skew can lead to an overestimation of model performance and contributions to NLP progress. However, the impact of cultural bias on metaphor processing, particularly in multimodal contexts, remains largely unexplored. To address this gap, we introduce MultiMM, a Multicultural Multimodal Metaphor dataset designed for cross-cultural studies of metaphor in Chinese and English. MultiMM consists of 8,461 text-image advertisement pairs, each accompanied by fine-grained annotations, providing a deeper understanding of multimodal metaphors beyond a single cultural domain. Additionally, we propose Sentiment-Enriched Metaphor Detection (SEMD), a baseline model that integrates sentiment embeddings to enhance metaphor comprehension across cultural backgrounds. Experimental results validate the effectiveness of SEMD on metaphor detection and sentiment analysis tasks. We hope this work increases awareness of cultural bias in NLP research and contributes to the development of fairer and more inclusive language models.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2025" paper-select="true" topic="">
+                    <strong>[C16] PUB: An LLM-Enhanced Personality-Driven User Behaviour Simulator for Recommender
+                        System Evaluation </strong>
                     <br> Chenglong Ma, <b>Ziqi Xu</b>, Yongli Ren, Danula Hettiachchi and Jeffrey Chan
-                    <br> In Proceedings of the International ACM SIGIR Conference on Research and Development in Information Retrieval (<b>SIGIR 2025</b>)
+                    <br> In Proceedings of the International ACM SIGIR Conference on Research and Development in
+                    Information Retrieval (<b>SIGIR 2025</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('PUB-abs')">Abstract</a>]
                     [<a href="./paper/PUB.pdf">PDF</a>]
                     <div id="PUB-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Traditional offline evaluation methods for recommender systems struggle to capture the complexity of modern platforms due to sparse behavioural signals, noisy data, and limited modelling of user personality traits. While simulation frameworks can generate synthetic data to address these gaps, existing methods fail to replicate behavioural diversity, limiting their effectiveness. To overcome these challenges, we propose the Personality-driven User Behaviour Simulator (PUB), an LLM-based simulation framework that integrates the Big Five personality traits to model personalised user behaviour. PUB dynamically infers user personality from behavioural logs (e.g., ratings, reviews) and item metadata, then generates synthetic interactions that preserve statistical fidelity to real-world data. Experiments on the Amazon review dataset show that logs generated by PUB closely align with real user behaviour and reveal meaningful associations between personality traits and recommendation outcomes. These results highlight the potential of the personality-driven simulator to advance recommender system evaluation, offering scalable, controllable, high-fidelity alternatives to resource-intensive real-world experiments.
+                            Traditional offline evaluation methods for recommender systems struggle to capture the
+                            complexity of modern platforms due to sparse behavioural signals, noisy data, and limited
+                            modelling of user personality traits. While simulation frameworks can generate synthetic
+                            data to address these gaps, existing methods fail to replicate behavioural diversity,
+                            limiting their effectiveness. To overcome these challenges, we propose the
+                            Personality-driven User Behaviour Simulator (PUB), an LLM-based simulation framework that
+                            integrates the Big Five personality traits to model personalised user behaviour. PUB
+                            dynamically infers user personality from behavioural logs (e.g., ratings, reviews) and item
+                            metadata, then generates synthetic interactions that preserve statistical fidelity to
+                            real-world data. Experiments on the Amazon review dataset show that logs generated by PUB
+                            closely align with real user behaviour and reveal meaningful associations between
+                            personality traits and recommendation outcomes. These results highlight the potential of the
+                            personality-driven simulator to advance recommender system evaluation, offering scalable,
+                            controllable, high-fidelity alternatives to resource-intensive real-world experiments.
                         </p>
                     </div>
                 </div>
-                
+
+                <div class="pubs" paper-year="2025" paper-select="true" topic="">
+                    <strong>[J04] An Item Response Theory-based R module for Algorithm Portfolio Analysis </strong>
+                    <br> Brodie Oldfield, Sevvandi Kandanaarachchi <b>Ziqi Xu</b> and Mario Andrés Muñoz
+                    <br> <b>SoftwareX</b>
+                    <br> [<a href="javascript:void(0)" onclick="display('J04')">Abstract</a>]
+                    [<a href="./paper/J04.pdf">PDF</a>]
+                    <div id="J04" style="display:none">
+                        <p style="text-align: justify;">
+                            Experimental evaluation is crucial in AI research, especially for assessing algorithms across diverse tasks. Many studies often evaluate a limited set of algorithms, failing to fully understand their strengths and weaknesses within a comprehensive portfolio. This paper introduces an Item Response Theory (IRT) based analysis tool for algorithm portfolio evaluation called AIRT-Module. Traditionally used in educational psychometrics, IRT models test question difficulty and student ability using responses to test questions. Adapting IRT to algorithm evaluation, the AIRT-Module contains a Shiny web application and the R package airt. AIRT-Module uses algorithm performance measures to compute anomalousness, consistency, and difficulty limits for an algorithm and the difficulty of test instances. The strengths and weaknesses of algorithms are visualised using the difficulty spectrum of the test instances. AIRT-Module offers a detailed understanding of algorithm capabilities across varied test instances, thus enhancing comprehensive AI method assessment.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2025" paper-select="true" topic="">
+                    <strong>[C15] Telling Peer Direct Effects from Indirect Effects in Observational Network Data </strong>
+                    <br> Xiaojing Du, Jiuyong Li, Debo Cheng, Lin Liu, Wentao Gao, Xiongren Chen and <b>Ziqi Xu</b>
+                    <br> In Proceedings of the International Conference on Machine Learning (<b>ICML 2025</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('C15')">Abstract</a>]
+                    [<a href="./paper/C15.pdf">PDF</a>]
+                    <div id="C15" style="display:none">
+                        <p style="text-align: justify;">
+                            Estimating causal effects is crucial for decision-makers in many applications, but it is particularly challenging with observational network data due to peer interactions. Some algorithms have been proposed to estimate causal effects involving network data, particularly peer effects, but they often fail to tell apart diverse peer effects. To address this issue, we propose a general setting which considers both peer direct effects and peer indirect effects, and the effect of an individual's own treatment, and provide the identification conditions of these causal effects. To differentiate these effects, we leverage causal mediation analysis and tailor it specifically for network data. Furthermore, given the inherent challenges of accurately estimating effects in networked environments, we propose to incorporate attention mechanisms to capture the varying influences of different neighbors and to explore high-order neighbor effects using multi-layer graph neural networks (GNNs). Additionally, we employ the Hilbert-Schmidt Independence Criterion (HSIC) to further enhance the model’s robustness and accuracy. Extensive experiments on two semi-synthetic datasets derived from real-world networks and on a dataset from a recommendation system confirm the effectiveness of our approach. Our findings have the potential to improve intervention strategies in networked systems, particularly in social networks and public health.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2025" paper-select="true" topic="">
+                    <strong>[J03] Data-driven Learning Optimal K Values for K-Nearest Neighbour Matching in Causal Inference </strong>
+                    <br> Yinghao Zhang, Tingting Xu, Debo Cheng, Jiuyong Li, Lin Liu, <b>Ziqi Xu</b> and Zaiwen Feng
+                    <br> Data Mining and Knowledge Discovery (<b>DMKD</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('J03')">Abstract</a>]
+                    [<a href="./paper/J03.pdf">PDF</a>]
+                    <div id="J03" style="display:none">
+                        <p style="text-align: justify;">
+                            Within the realm of causal inference, a pivotal task involves causal effect estimation from observational data when there exist confounding variables. The K-Nearest Neighbour Matching (K-NNM) method is widely applied to handle confounding bias, but its general application sets a uniform K value for all samples, which can lead to suboptimal results in practice. To overcome this limitation, this paper introduces a novel method for causal effect estimation called Dynamic K-Nearest Neighbour Matching (DK-NNM). The DK-NNM method employs a data-driven learning strategy to determine the optimal value of K for each sample. In practice, DK-NNM reconstructs a sparse coefficient matrix for all samples using sparse learning, while simultaneously learning a graph matrix to preserve local information and sample similarity. This approach helps identify the most suitable K-value for each sample. Additionally, DK-NNM utilizes joint propensity and prognostic scores to effectively mitigate confounding bias arising from high-dimensional covariates during the K-NNM process. Experiments performed on various synthetic, semi-synthetic, and real-world datasets conclusively demonstrate that DK-NNM surpasses baseline models in estimating causal effects from observational data and provides significant improvements over traditional methods.
+                        </p>
+                    </div>
+                </div>
+
                 <div class="pubs" paper-year="2025" paper-select="true" topic="fairness">
-                    <strong>[C14] Towards Better Evaluation of Recommendation Algorithms with Bi-directional Item Response Theory </strong>
-                    <br> <b>Ziqi Xu</b>, Chenglong Ma, Yongli Ren, Jeffrey Chan, Wei Shao and Feng Xia
+                    <strong>[C14] Towards Better Evaluation of Recommendation Algorithms with Bi-directional Item
+                        Response Theory </strong>
+                    <br> <b>Ziqi Xu</b>, Chenglong Ma, Yongli Ren, Jeffrey Chan, Wei Shao and Feng Xia [<b>Corresponding Author</b>]
                     <br> In Proceedings of the ACM Web Conference (<b>WWW 2025</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('BiReIRT-abs')">Abstract</a>]
                     [<a href="./paper/BiReIRT.pdf">PDF</a>]
                     <div id="BiReIRT-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Recommendation algorithms are typically evaluated on various datasets and compared against other algorithms employing diverse strategies. However, current evaluation practices predominantly rely on rank-based metrics, focusing solely on performance outcomes while overlooking the latent traits of datasets and recommendation algorithms. In this paper, we propose a bi-directional Item Response Theory (Bi-ReIRT) framework, which offers a fine-grained evaluation by simultaneously modelling the latent traits of recommendation algorithms (i.e., their ability) and datasets (i.e., their inherent challenges). This is the first work to apply the IRT framework for evaluating recommendation algorithms on the dataset level. The Bi-ReIRT framework enables visualisations of algorithms' performance across datasets with varying levels of inherent challenge. We conduct extensive experiments across a portfolio of recommendation algorithms and datasets, exploring the implications of key IRT parameters such as discrimination, difficulty, and ability. Moreover, the interpretability of these parameters provides deeper insights into the characteristics of both recommendation algorithms and datasets.
+                            Recommendation algorithms are typically evaluated on various datasets and compared against
+                            other algorithms employing diverse strategies. However, current evaluation practices
+                            predominantly rely on rank-based metrics, focusing solely on performance outcomes while
+                            overlooking the latent traits of datasets and recommendation algorithms. In this paper, we
+                            propose a bi-directional Item Response Theory (Bi-ReIRT) framework, which offers a
+                            fine-grained evaluation by simultaneously modelling the latent traits of recommendation
+                            algorithms (i.e., their ability) and datasets (i.e., their inherent challenges). This is the
+                            first work to apply the IRT framework for evaluating recommendation algorithms on the
+                            dataset level. The Bi-ReIRT framework enables visualisations of algorithms' performance
+                            across datasets with varying levels of inherent challenge. We conduct extensive experiments
+                            across a portfolio of recommendation algorithms and datasets, exploring the implications of
+                            key IRT parameters such as discrimination, difficulty, and ability. Moreover, the
+                            interpretability of these parameters provides deeper insights into the characteristics of
+                            both recommendation algorithms and datasets.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2025" paper-select="true" topic="">
+                    <strong>[J02] Deconfounding Representation Learning for Mitigating Latent Confounding Effects in
+                        Recommendation </strong>
+                    <br> Guixian Zhang, Guan Yuan, Lin Liu, Jiuyong Li, <b>Ziqi Xu</b> and Shichao Zhang
+                    <br> Knowledge and Information Systems (<b>KIS</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DeGCL-abs')">Abstract</a>]
+                    [<a href="./paper/DeGCL.pdf">PDF</a>]
+                    <div id="DeGCL-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            Contrastive learning has gained significant attention in the field of recommender systems
+                            due to its ability to learn highly expressive representations with limited labels. However,
+                            historical user–item interaction data used for recommender systems often contain
+                            confounders, thereby establishing spurious correlations between user preferences and
+                            confounders during self-supervised training and misleading recommender systems to use these
+                            correlations as shortcuts for generating recommendations. Existing approaches for debiasing
+                            usually involve manually identifying observed confounders, but they are often tailored to
+                            specific situations and overlook latent confounders. To address this challenging problem, we
+                            propose a Deconfounding Graph Contrastive Learning (DeGCL) method to provide deconfounding
+                            recommendations by adjusting for a learned deconfounding representation from interaction
+                            data, using the back-door adjustment strategy. DeGCL learns the representation to capture
+                            latent confounding effects in observational data between users and items. It artificially
+                            adds interactions and noise to create contrastive views, which help deconfound the model. By
+                            adjusting for the learned representation, DeGCL mitigates latent confounding effects in
+                            training downstream recommendation models. Experiments on two real-world datasets
+                            demonstrate that our method outperforms state-of-the-art methods, suggesting its potential
+                            to provide more effective recommendations in practice.
                         </p>
                     </div>
                 </div>
@@ -164,74 +285,184 @@
 
                 <div class="pubs" paper-year="2025" paper-select="true" topic="fairness">
                     <strong>[C13] Fairness Evaluation with Item Response Theory </strong>
-                    <br> <b>Ziqi Xu</b>, Sevvandi Kandanaarachchi, Cheng Soon Ong and Eirini Ntoutsi
+                    <br> <b>Ziqi Xu</b>, Sevvandi Kandanaarachchi, Cheng Soon Ong and Eirini Ntoutsi [<b>Corresponding Author</b>]
                     <br> In Proceedings of the ACM Web Conference (<b>WWW 2025</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('FairIRT-abs')">Abstract</a>]
                     [<a href="./paper/FairIRT.pdf">PDF</a>]
                     <div id="FairIRT-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Item Response Theory (IRT) has been widely used in educational psychometrics to assess student ability, as well as the difficulty and discrimination of test questions. In this context, discrimination specifically refers to how effectively a question distinguishes between students of different ability levels, and it does not carry any connotation related to fairness. In recent years, IRT has been successfully used to evaluate the predictive performance of Machine Learning (ML) models, but this paper marks its first application in fairness evaluation. In this paper, we propose a novel Fair-IRT framework to evaluate a set of predictive models on a set of individuals, while simultaneously eliciting specific parameters, namely, the ability to make fair predictions (a feature of predictive models), as well as the discrimination and difficulty of individuals that affect the prediction results. Furthermore, we conduct a series of experiments to comprehensively understand the implications of these parameters for fairness evaluation. Detailed explanations for item characteristic curves (ICCs) are provided for particular individuals. We propose the flatness of ICCs to disentangle the unfairness between individuals and predictive models. The experiments demonstrate the effectiveness of this framework as a fairness evaluation tool. Two real-world case studies illustrate its potential application in evaluating fairness in both classification and regression tasks. Our paper aligns well with the Responsible Web track by proposing a Fair-IRT framework to evaluate fairness in ML models, which directly contributes to the development of a more inclusive, equitable, and trustworthy AI.
+                            Item Response Theory (IRT) has been widely used in educational psychometrics to assess
+                            student ability, as well as the difficulty and discrimination of test questions. In this
+                            context, discrimination specifically refers to how effectively a question distinguishes
+                            between students of different ability levels, and it does not carry any connotation related
+                            to fairness. In recent years, IRT has been successfully used to evaluate the predictive
+                            performance of Machine Learning (ML) models, but this paper marks its first application in
+                            fairness evaluation. In this paper, we propose a novel Fair-IRT framework to evaluate a set
+                            of predictive models on a set of individuals, while simultaneously eliciting specific
+                            parameters, namely, the ability to make fair predictions (a feature of predictive models),
+                            as well as the discrimination and difficulty of individuals that affect the prediction
+                            results. Furthermore, we conduct a series of experiments to comprehensively understand the
+                            implications of these parameters for fairness evaluation. Detailed explanations for item
+                            characteristic curves (ICCs) are provided for particular individuals. We propose the
+                            flatness of ICCs to disentangle the unfairness between individuals and predictive models.
+                            The experiments demonstrate the effectiveness of this framework as a fairness evaluation
+                            tool. Two real-world case studies illustrate its potential application in evaluating
+                            fairness in both classification and regression tasks. Our paper aligns well with the
+                            Responsible Web track by proposing a Fair-IRT framework to evaluate fairness in ML models,
+                            which directly contributes to the development of a more inclusive, equitable, and
+                            trustworthy AI.
                         </p>
                     </div>
                 </div>
 
 
                 <div class="pubs" paper-year="2025" paper-select="true" topic="application">
-                    <strong>[C12] Off-policy Evaluation for Multiple Actions in the Presence of Unobserved Confounders </strong>
+                    <strong>[C12] Off-policy Evaluation for Multiple Actions in the Presence of Unobserved Confounders
+                    </strong>
                     <br> Haolin Wang, Lin Liu, Jiuyong Li, <b>Ziqi Xu</b>, Jixue Liu, Zehong Cao and Debo Cheng
                     <br> In Proceedings of the ACM Web Conference (<b>WWW 2025</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('policy-abs')">Abstract</a>]
                     [<a href="./paper/policy.pdf">PDF</a>]
                     <div id="policy-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Off-policy evaluation (OPE) is a crucial problem in reinforcement learning (RL), where the goal is to estimate the long-term cumulative reward of a target policy using historical data generated by a potentially different behaviour policy. In many real-world applications, such as precision medicine and recommendation systems, unobserved confounders may influence the action, reward, and state transition dynamics, which leads to biased estimates if not properly addressed. While existing methods for handling unobserved confounders in OPE focus on single-action settings, they are less effective in multi-action scenarios commonly found in practical applications, where an agent can take multiple actions simultaneously. In this paper, we propose a novel auxiliary variable-aided method for OPE in multi-action settings with unobserved confounders. Our approach overcomes the limitations of traditional auxiliary variable methods for multi-action scenarios by requiring only a single auxiliary variable, relaxing the need for as many auxiliary variables as the actions. Through theoretical analysis, we prove that our method provides an unbiased estimation of the target policy value. Empirical evaluations demonstrate that our estimator achieves better performance compared to existing baseline methods, highlighting its effectiveness and reliability in addressing unobserved confounders in multi-action OPE settings.
+                            Off-policy evaluation (OPE) is a crucial problem in reinforcement learning (RL), where the
+                            goal is to estimate the long-term cumulative reward of a target policy using historical data
+                            generated by a potentially different behaviour policy. In many real-world applications, such
+                            as precision medicine and recommendation systems, unobserved confounders may influence the
+                            action, reward, and state transition dynamics, which leads to biased estimates if not
+                            properly addressed. While existing methods for handling unobserved confounders in OPE focus
+                            on single-action settings, they are less effective in multi-action scenarios commonly found
+                            in practical applications, where an agent can take multiple actions simultaneously. In this
+                            paper, we propose a novel auxiliary variable-aided method for OPE in multi-action settings
+                            with unobserved confounders. Our approach overcomes the limitations of traditional auxiliary
+                            variable methods for multi-action scenarios by requiring only a single auxiliary variable,
+                            relaxing the need for as many auxiliary variables as the actions. Through theoretical
+                            analysis, we prove that our method provides an unbiased estimation of the target policy
+                            value. Empirical evaluations demonstrate that our estimator achieves better performance
+                            compared to existing baseline methods, highlighting its effectiveness and reliability in
+                            addressing unobserved confounders in multi-action OPE settings.
                         </p>
                     </div>
                 </div>
 
-                <div class="pubs" paper-year="2025" paper-select="true" topic="">
-                    <strong>[J02] Deconfounding Representation Learning for Mitigating Latent Confounding Effects in Recommendation </strong>
-                    <br> Guixian Zhang, Guan Yuan, Lin Liu, Jiuyong Li, <b>Ziqi Xu</b> and Shichao Zhang 
-                    <br> Knowledge and Information Systems (<b>KIS</b>)
-                    <br> [<a href="javascript:void(0)" onclick="display('DeGCL-abs')">Abstract</a>]
-                    [<a href="./paper/DeGCL.pdf">PDF</a>]
-                    <div id="DeGCL-abs" style="display:none">
-                        <p style="text-align: justify;">
-                            Contrastive learning has gained significant attention in the field of recommender systems due to its ability to learn highly expressive representations with limited labels. However, historical user–item interaction data used for recommender systems often contain confounders, thereby establishing spurious correlations between user preferences and confounders during self-supervised training and misleading recommender systems to use these correlations as shortcuts for generating recommendations. Existing approaches for debiasing usually involve manually identifying observed confounders, but they are often tailored to specific situations and overlook latent confounders. To address this challenging problem, we propose a Deconfounding Graph Contrastive Learning (DeGCL) method to provide deconfounding recommendations by adjusting for a learned deconfounding representation from interaction data, using the back-door adjustment strategy. DeGCL learns the representation to capture latent confounding effects in observational data between users and items. It artificially adds interactions and noise to create contrastive views, which help deconfound the model. By adjusting for the learned representation, DeGCL mitigates latent confounding effects in training downstream recommendation models. Experiments on two real-world datasets demonstrate that our method outperforms state-of-the-art methods, suggesting its potential to provide more effective recommendations in practice.
-                        </p>
-                    </div>
-                </div>
 
                 <div class="pubs" paper-year="2024" paper-select="true" topic="">
                     <strong>[J01] Disentangled Representation Learning for Causal Inference with Instruments </strong>
-                    <br> Debo Cheng, Jiuyong Li, Lin Liu, <b>Ziqi Xu</b>, Weijia Zhang, Jixue Liu and Thuc Duy Le 
+                    <br> Debo Cheng, Jiuyong Li, Lin Liu, <b>Ziqi Xu</b>, Weijia Zhang, Jixue Liu and Thuc Duy Le
                     <br> IEEE Transactions on Neural Networks and Learning Systems (<b>TNNLS</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('DIV.VAE-abs')">Abstract</a>]
                     [<a href="./paper/DIV.VAE.pdf">PDF</a>]
                     <div id="DIV.VAE-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Latent confounders are a fundamental challenge for inferring causal effects from observational data. The instrumental variable (IV) approach is a practical way to address this challenge. Existing IV-based estimators need a known IV or other strong assumptions, such as the existence of two or more IVs in the system, which limits the application of the IV approach. In this article, we consider a relaxed requirement, which assumes there is an IV proxy in the system without knowing which variable is the proxy. We propose a variational autoencoder (VAE)-based disentangled representation learning method to learn an IV representation from a dataset with latent confounders and then utilize the IV representation to obtain an unbiased estimation of the causal effect from the data. Extensive experiments on synthetic and real-world data have demonstrated that the proposed algorithm outperforms the existing IV-based estimators and VAE-based estimators.
+                            Latent confounders are a fundamental challenge for inferring causal effects from
+                            observational data. The instrumental variable (IV) approach is a practical way to address
+                            this challenge. Existing IV-based estimators need a known IV or other strong assumptions,
+                            such as the existence of two or more IVs in the system, which limits the application of the
+                            IV approach. In this article, we consider a relaxed requirement, which assumes there is an
+                            IV proxy in the system without knowing which variable is the proxy. We propose a variational
+                            autoencoder (VAE)-based disentangled representation learning method to learn an IV
+                            representation from a dataset with latent confounders and then utilize the IV representation
+                            to obtain an unbiased estimation of the causal effect from the data. Extensive experiments
+                            on synthetic and real-world data have demonstrated that the proposed algorithm outperforms
+                            the existing IV-based estimators and VAE-based estimators.
                         </p>
                     </div>
                 </div>
 
 
                 <div class="pubs" paper-year="2024" paper-select="true" topic="">
-                    <strong>[C11] TSI: A Multi-view Representation Learning Approach for Time Series Forecasting </strong>
-                    <br> Wentao Gao, <b>Ziqi Xu</b>, Jiuyong Li, Lin Liu, Jixue Liu, Thuc Duy Le, Debo Cheng, Yanchang Zhao and Yun Chen 
-                    <br> In Proceedings of the Australasian Joint Conference on Artificial Intelligence (<b>AJCAI 2024</b>)
+                    <strong>[C11] TSI: A Multi-view Representation Learning Approach for Time Series Forecasting
+                    </strong>
+                    <br> Wentao Gao, <b>Ziqi Xu</b>, Jiuyong Li, Lin Liu, Jixue Liu, Thuc Duy Le, Debo Cheng, Yanchang
+                    Zhao and Yun Chen
+                    <br> In Proceedings of the Australasian Joint Conference on Artificial Intelligence (<b>AJCAI
+                        2024</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('TSI-abs')">Abstract</a>]
                     [<a href="./paper/TSI.pdf">PDF</a>]
                     <div id="TSI-abs" style="display:none">
                         <p style="text-align: justify;">
-                            As the growing demand for long sequence time-series forecasting in real-world applications, such as electricity consumption planning, the significance of time series forecasting becomes increasingly crucial across various domains. This is highlighted by recent advancements in representation learning within the field. This study introduces a novel multi-view approach for time series forecasting that innovatively integrates trend and seasonal representations with an Independent Component Analysis (ICA)-based representation. Recognizing the limitations of existing methods in representing complex and high-dimensional time series data, this research addresses the challenge by combining TS (trend and seasonality) and ICA (independent components) perspectives. This approach offers a holistic understanding of time series data, going beyond traditional models that often miss nuanced, nonlinear relationships. The efficacy of TSI model is demonstrated through comprehensive testing on various benchmark datasets, where it shows superior performance over current state-of-the-art models, particularly in multivariate forecasting. This method not only enhances the accuracy of forecasting but also contributes significantly to the field by providing a more in-depth understanding of time series data. The research which uses ICA for a view lays the groundwork for further exploration and methodological advancements in time series forecasting, opening new avenues for research and practical applications.
+                            As the growing demand for long sequence time-series forecasting in real-world applications,
+                            such as electricity consumption planning, the significance of time series forecasting
+                            becomes increasingly crucial across various domains. This is highlighted by recent
+                            advancements in representation learning within the field. This study introduces a novel
+                            multi-view approach for time series forecasting that innovatively integrates trend and
+                            seasonal representations with an Independent Component Analysis (ICA)-based representation.
+                            Recognizing the limitations of existing methods in representing complex and high-dimensional
+                            time series data, this research addresses the challenge by combining TS (trend and
+                            seasonality) and ICA (independent components) perspectives. This approach offers a holistic
+                            understanding of time series data, going beyond traditional models that often miss nuanced,
+                            nonlinear relationships. The efficacy of TSI model is demonstrated through comprehensive
+                            testing on various benchmark datasets, where it shows superior performance over current
+                            state-of-the-art models, particularly in multivariate forecasting. This method not only
+                            enhances the accuracy of forecasting but also contributes significantly to the field by
+                            providing a more in-depth understanding of time series data. The research which uses ICA for
+                            a view lays the groundwork for further exploration and methodological advancements in time
+                            series forecasting, opening new avenues for research and practical applications.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="pubs" paper-year="2024" paper-select="true" topic="">
+                    <strong>[C10] Instrumental Variable Estimation for Causal Inference in Longitudinal Data with
+                        Time-Dependent Latent Confounders </strong>
+                    <br> Debo Cheng, <b>Ziqi Xu</b>, Jiuyong Li, Jixue Liu, Lin Liu, Wentao Gao and Thuc Duy Le [<b>Co-first Author</b>]
+                    <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2024</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('TIFM-abs')">Abstract</a>]
+                    [<a href="./paper/TIFM.pdf">PDF</a>]
+                    <div id="TIFM-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            Causal inference from longitudinal observational data is a challenging problem due to the
+                            difficulty in correctly identifying the time-dependent confounders, especially in the
+                            presence of latent time-dependent confounders. Instrumental variable (IV) is a powerful tool
+                            for addressing the latent confounders issue, but the traditional IV technique cannot deal
+                            with latent time-dependent confounders in longitudinal studies. In this work, we propose a
+                            novel Time-dependent Instrumental Factor Model (TIFM) for time-varying causal effect
+                            estimation from data with latent time-dependent confounders. At each time-step, the proposed
+                            TIFM method employs the Recurrent Neural Network (RNN) architecture to infer latent IV, and
+                            then uses the inferred latent IV factor for addressing the confounding bias caused by the
+                            latent time-dependent confounders. We provide a theoretical analysis for the proposed TIFM
+                            method regarding causal effect estimation in longitudinal data. Extensive evaluation with
+                            synthetic datasets demonstrates the effectiveness of TIFM in addressing causal effect
+                            estimation over time. We further apply TIFM to a climate dataset to showcase the potential
+                            of the proposed method in tackling real-world problems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2024" paper-select="true" topic="">
+                    <strong>[C09] Conditional Instrumental Variable Regression with Representation Learning for Causal
+                        Inference </strong>
+                    <br> Debo Cheng, <b>Ziqi Xu</b>, Jiuyong Li, Jixue Liu, Lin Liu, and Thuc Duy Le [<b>Co-first Author</b>]
+                    <br> In Proceedings of the International Conference on Learning Representations (<b>ICLR 2024</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('CBRL.CIV-abs')">Abstract</a>]
+                    [<a href="./paper/CBRL.CIV.pdf">PDF</a>]
+                    [<a href="https://openreview.net/forum?id=qDhq1icpO8">OpenReview</a>]
+                    <div id="CBRL.CIV-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            This paper studies the challenging problem of estimating causal effects from observational
+                            data, in the presence of unobserved confounders. The two-stage least square (TSLS) method
+                            and its variants with a standard instrumental variable (IV) are commonly used to eliminate
+                            confounding bias, including the bias caused by unobserved confounders, but they rely on the
+                            linearity assumption. Besides, the strict condition of unconfounded instruments posed on a
+                            standard IV is too strong to be practical. To address these challenging and practical
+                            problems of the standard IV method (linearity assumption and the strict condition), in this
+                            paper, we use a conditional IV (CIV) to relax the unconfounded instrument condition of
+                            standard IV and propose a non-linear CIV regression with Confounding Balancing
+                            Representation Learning, CBRL.CIV, for jointly eliminating the confounding bias from
+                            unobserved confounders and balancing the observed confounders, without the linearity
+                            assumption. We theoretically demonstrate the soundness of CBRL.CIV. Extensive experiments on
+                            synthetic and two real-world datasets show the competitive performance of CBRL.CIV against
+                            state-of-the-art IV-based estimators and superiority in dealing with the non-linear
+                            situation.
                         </p>
                     </div>
                 </div>
 
 
                 <div class="pubs" paper-year="2024" paper-select="true" topic="causalinference">
-                    <strong>[C10] Causal Inference with Conditional Front-Door Adjustment and Identifiable Variational Autoencoder </strong>
+                    <strong>[C08] Causal Inference with Conditional Front-Door Adjustment and Identifiable Variational
+                        Autoencoder </strong>
                     <br> <b>Ziqi Xu</b>, Debo Cheng, Jiuyong Li, Jixue Liu, Lin Liu, and Kui Yu
                     <br> In Proceedings of the International Conference on Learning Representations (<b>ICLR 2024</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('CFDiVAE-abs')">Abstract</a>]
@@ -239,40 +470,109 @@
                     [<a href="https://openreview.net/forum?id=wFf9m4v7oC">OpenReview</a>]
                     <div id="CFDiVAE-abs" style="display:none">
                         <p style="text-align: justify;">
-                            An essential and challenging problem in causal inference is causal effect estimation from observational data. The problem becomes more difficult with the presence of unobserved confounding variables. The front-door adjustment is an approach for dealing with unobserved confounding variables. However, the restriction for the standard front-door adjustment is difficult to satisfy in practice. In this paper, we relax some of the restrictions by proposing the concept of conditional front-door (CFD) adjustment and develop the theorem that guarantees the causal effect identifiability of CFD adjustment. By leveraging the ability of deep generative models, we propose CFDiVAE to learn the representation of the CFD adjustment variable directly from data with the identifiable Variational AutoEncoder and formally prove the model identifiability. Extensive experiments on synthetic datasets validate the effectiveness of CFDiVAE and its superiority over existing methods. The experiments also show that the performance of CFDiVAE is less sensitive to the causal strength of unobserved confounding variables. We further apply CFDiVAE to a real-world dataset to demonstrate its potential application.
+                            An essential and challenging problem in causal inference is causal effect estimation from
+                            observational data. The problem becomes more difficult with the presence of unobserved
+                            confounding variables. The front-door adjustment is an approach for dealing with unobserved
+                            confounding variables. However, the restriction for the standard front-door adjustment is
+                            difficult to satisfy in practice. In this paper, we relax some of the restrictions by
+                            proposing the concept of conditional front-door (CFD) adjustment and develop the theorem
+                            that guarantees the causal effect identifiability of CFD adjustment. By leveraging the
+                            ability of deep generative models, we propose CFDiVAE to learn the representation of the CFD
+                            adjustment variable directly from data with the identifiable Variational AutoEncoder and
+                            formally prove the model identifiability. Extensive experiments on synthetic datasets
+                            validate the effectiveness of CFDiVAE and its superiority over existing methods. The
+                            experiments also show that the performance of CFDiVAE is less sensitive to the causal
+                            strength of unobserved confounding variables. We further apply CFDiVAE to a real-world
+                            dataset to demonstrate its potential application.
                         </p>
                     </div>
                 </div>
 
-                <div class="pubs" paper-year="2024" paper-select="true" topic="">
-                    <strong>[C09] Conditional Instrumental Variable Regression with Representation Learning for Causal Inference </strong>
-                    <br> Debo Cheng*, <b>Ziqi Xu*</b>, Jiuyong Li, Jixue Liu, Lin Liu, and Thuc Duy Le
-                    <br> In Proceedings of the International Conference on Learning Representations (<b>ICLR 2024</b>)
-                    <br> [<a href="javascript:void(0)" onclick="display('CBRL.CIV-abs')">Abstract</a>]
-                    [<a href="./paper/CBRL.CIV.pdf">PDF</a>]
-                    [<a href="https://openreview.net/forum?id=qDhq1icpO8">OpenReview</a>]
-                    <div id="CBRL.CIV-abs" style="display:none">
+
+                <div class="pubs" paper-year="2023" paper-select="true" topic="">
+                    <strong>[C07] Disentangled Latent Representation Learning for Tackling the Confounding M-Bias
+                        Problem in Causal Inference </strong>
+                    <br> Debo Cheng, Yang Xie, <b>Ziqi Xu</b>, Jiuyong Li, Lin Liu, Jixue Liu, Yinghao Zhang and
+                    Zaiwen Feng [<b>Co-first Author</b>]
+                    <br> In Proceedings of the IEEE International Conference on Data Mining (<b>ICDM 2023</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DLRCE-abs')">Abstract</a>]
+                    [<a href="./paper/DLRCE.pdf">PDF</a>]
+                    <div id="DLRCE-abs" style="display:none">
                         <p style="text-align: justify;">
-                            This paper studies the challenging problem of estimating causal effects from observational data, in the presence of unobserved confounders. The two-stage least square (TSLS) method and its variants with a standard instrumental variable (IV) are commonly used to eliminate confounding bias, including the bias caused by unobserved confounders, but they rely on the linearity assumption. Besides, the strict condition of unconfounded instruments posed on a standard IV is too strong to be practical. To address these challenging and practical problems of the standard IV method (linearity assumption and the strict condition), in this paper, we use a conditional IV (CIV) to relax the unconfounded instrument condition of standard IV and propose a non-linear CIV regression with Confounding Balancing Representation Learning, CBRL.CIV, for jointly eliminating the confounding bias from unobserved confounders and balancing the observed confounders, without the linearity assumption. We theoretically demonstrate the soundness of CBRL.CIV. Extensive experiments on synthetic and two real-world datasets show the competitive performance of CBRL.CIV against state-of-the-art IV-based estimators and superiority in dealing with the non-linear situation.
+                            In causal inference, it is a fundamental task to estimate the causal effect from
+                            observational data. However, latent confounders pose major challenges in causal inference in
+                            observational data, for example, confounding bias and M-bias. Recent data-driven causal
+                            effect estimators tackle the confounding bias problem via balanced representation learning,
+                            but assume no M-bias in the system, thus they fail to handle the M-bias. In this paper, we
+                            identify a challenging and unsolved problem caused by a variable that leads to confounding
+                            bias and M-bias simultaneously. To address this problem with co-occurring M-bias and
+                            confounding bias, we propose a novel Disentangled Latent Representation learning framework
+                            for learning latent representations from proxy variables for unbiased Causal effect
+                            Estimation (DLRCE) from observational data. Specifically, DLRCE learns three sets of latent
+                            representations from the measured proxy variables to adjust for the confounding bias and
+                            M-bias. Extensive experiments on both synthetic and three real-world datasets demonstrate
+                            that DLRCE significantly outperforms the state-of-the-art estimators in the case of the
+                            presence of both confounding bias and M-bias.
                         </p>
                     </div>
                 </div>
 
-                <div class="pubs" paper-year="2024" paper-select="true" topic="">
-                    <strong>[C08] Instrumental Variable Estimation for Causal Inference in Longitudinal Data with Time-Dependent Latent Confounders </strong>
-                    <br> Debo Cheng*, <b>Ziqi Xu*</b>, Jiuyong Li, Jixue Liu, Lin Liu, Wentao Gao and Thuc Duy Le
-                    <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2024</b>)
-                    <br> [<a href="javascript:void(0)" onclick="display('TIFM-abs')">Abstract</a>]
-                    [<a href="./paper/TIFM.pdf">PDF</a>]
-                    <div id="TIFM-abs" style="display:none">
+                <div class="pubs" paper-year="2023" paper-select="true" topic="">
+                    <strong>[C06] A Data-Driven Approach to Finding K for K Nearest Neighbor Matching in Average Causal
+                        Effect Estimation </strong>
+                    <br> Tingting Xu, Yinghao Zhang, Jiuyong Li, Lin Liu, <b>Ziqi Xu</b>, Debo Cheng and Zaiwen Feng
+                    <br> In Proceedings of the International Conference on Web Information Systems Engineering (<b>WISE
+                        2023</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('DK-NNM-abs')">Abstract</a>]
+                    [<a href="./paper/DK-NNM.pdf">PDF</a>]
+                    <div id="DK-NNM-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Causal inference from longitudinal observational data is a challenging problem due to the difficulty in correctly identifying the time-dependent confounders, especially in the presence of latent time-dependent confounders. Instrumental variable (IV) is a powerful tool for addressing the latent confounders issue, but the traditional IV technique cannot deal with latent time-dependent confounders in longitudinal studies. In this work, we propose a novel Time-dependent Instrumental Factor Model (TIFM) for time-varying causal effect estimation from data with latent time-dependent confounders. At each time-step, the proposed TIFM method employs the Recurrent Neural Network (RNN) architecture to infer latent IV, and then uses the inferred latent IV factor for addressing the confounding bias caused by the latent time-dependent confounders. We provide a theoretical analysis for the proposed TIFM method regarding causal effect estimation in longitudinal data. Extensive evaluation with synthetic datasets demonstrates the effectiveness of TIFM in addressing causal effect estimation over time. We further apply TIFM to a climate dataset to showcase the potential of the proposed method in tackling real-world problems.
+                            In causal inference, a fundamental task is to estimate causal effects using observational
+                            data with confounding variables. K Nearest Neighbor Matching (K-NNM) is a commonly used
+                            method to address confounding bias. However, the traditional K-NNM method uses the same K
+                            value for all units, which may result in unacceptable performance in real-world
+                            applications. To address this issue, we propose a novel nearest-neighbor matching method
+                            called DK-NNM, which uses a data-driven approach to searching for the optimal K values for
+                            different units. DK-NNM first reconstructs a sparse coefficient matrix of all units via
+                            sparse representation learning for finding the optimal K value for each unit. Then, the
+                            joint propensity scores and prognostic scores are utilized to deal with high-dimensional
+                            covariates when performing K nearest-neighbor matching with the obtained K value for a unit.
+                            Extensive experiments are conducted on both semi-synthetic and real-world datasets, and the
+                            results demonstrate that the proposed DK-NNM method outperforms the state-of-the-art causal
+                            effect estimation methods in estimating average causal effects from observational data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pubs" paper-year="2023" paper-select="true" topic="">
+                    <strong>[C05] Causal Inference with Conditional Instruments Using Deep Generative Models </strong>
+                    <br> Debo Cheng, <b>Ziqi Xu</b>, Jiuyong Li, Lin Liu, Jixue Liu and Thuc Duy Le [<b>Co-first Author</b>]
+                    <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2023</b>)
+                    <br> [<a href="javascript:void(0)" onclick="display('CIVVAE-abs')">Abstract</a>]
+                    [<a href="./paper/CIVVAE.pdf">PDF</a>]
+                    <div id="CIVVAE-abs" style="display:none">
+                        <p style="text-align: justify;">
+                            The instrumental variable (IV) approach is a widely used way to estimate the causal effects
+                            of a treatment on an outcome of interest from observational data with latent confounders. A
+                            standard IV is expected to be related to the treatment variable and independent of all other
+                            variables in the system. However, it is challenging to search for a standard IV from data
+                            directly due to the strict conditions. The conditional IV (CIV) method has been proposed to
+                            allow a variable to be an instrument conditioning on a set of variables, allowing a wider
+                            choice of possible IVs and enabling broader practical applications of the IV approach.
+                            Nevertheless, there is not a data-driven method to discover a CIV and its conditioning set
+                            directly from data. To fill this gap, in this paper, we propose to learn the representations
+                            of the information of a CIV and its conditioning set from data with latent confounders for
+                            average causal effect estimation. By taking advantage of deep generative models, we develop
+                            a novel data-driven approach for simultaneously learning the representation of a CIV from
+                            measured variables and generating the representation of its conditioning set given measured
+                            variables. Extensive experiments on synthetic and real-world datasets show that our method
+                            outperforms the existing IV methods.
                         </p>
                     </div>
                 </div>
 
                 <div class="pubs" paper-year="2023" paper-select="true" topic="causalinference">
-                    <strong>[C07] Disentangled Representation for Causal Mediation Analysis </strong>
+                    <strong>[C04] Disentangled Representation for Causal Mediation Analysis </strong>
                     <br> <b>Ziqi Xu</b>, Debo Cheng, Jiuyong Li, Jixue Liu, Lin Liu and Ke Wang
                     <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2023</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('DMAVAE-abs')">Abstract</a>]
@@ -280,74 +580,75 @@
                     [<a href="https://github.com/IRON13/DMAVAE">Code</a>]
                     <div id="DMAVAE-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Estimating direct and indirect causal effects from observational data is crucial to understanding the causal mechanisms and predicting the behaviour under different interventions. Causal mediation analysis is a method that is often used to reveal direct and indirect effects. Deep learning shows promise in mediation analysis, but the current methods only assume latent confounders that affect treatment, mediator and outcome simultaneously, and fail to identify different types of latent confounders (e.g., confounders that only affect the mediator or outcome). Furthermore, current methods are based on the sequential ignorability assumption, which is not feasible for dealing with multiple types of latent confounders. This work aims to circumvent the sequential ignorability assumption and applies the piecemeal deconfounding assumption as an alternative. We propose the Disentangled Mediation Analysis Variational AutoEncoder (DMAVAE), which disentangles the representations of latent confounders into three types to accurately estimate the natural direct effect, natural indirect effect and total effect. Experimental results show that the proposed method outperforms existing methods and has strong generalisation ability. We further apply the method to a real-world dataset to show its potential application.
+                            Estimating direct and indirect causal effects from observational data is crucial to
+                            understanding the causal mechanisms and predicting the behaviour under different
+                            interventions. Causal mediation analysis is a method that is often used to reveal direct and
+                            indirect effects. Deep learning shows promise in mediation analysis, but the current methods
+                            only assume latent confounders that affect treatment, mediator and outcome simultaneously,
+                            and fail to identify different types of latent confounders (e.g., confounders that only
+                            affect the mediator or outcome). Furthermore, current methods are based on the sequential
+                            ignorability assumption, which is not feasible for dealing with multiple types of latent
+                            confounders. This work aims to circumvent the sequential ignorability assumption and applies
+                            the piecemeal deconfounding assumption as an alternative. We propose the Disentangled
+                            Mediation Analysis Variational AutoEncoder (DMAVAE), which disentangles the representations
+                            of latent confounders into three types to accurately estimate the natural direct effect,
+                            natural indirect effect and total effect. Experimental results show that the proposed method
+                            outperforms existing methods and has strong generalisation ability. We further apply the
+                            method to a real-world dataset to show its potential application.
                         </p>
                     </div>
                 </div>
 
-                <div class="pubs" paper-year="2023" paper-select="true" topic="">
-                    <strong>[C06] Causal Inference with Conditional Instruments Using Deep Generative Models </strong>
-                    <br> Debo Cheng*, <b>Ziqi Xu*</b>, Jiuyong Li, Lin Liu, Jixue Liu and Thuc Duy Le
-                    <br> In Proceedings of the AAAI Conference on Artificial Intelligence (<b>AAAI 2023</b>)
-                    <br> [<a href="javascript:void(0)" onclick="display('CIVVAE-abs')">Abstract</a>]
-                    [<a href="./paper/CIVVAE.pdf">PDF</a>]
-                    <div id="CIVVAE-abs" style="display:none">
-                        <p style="text-align: justify;">
-                            The instrumental variable (IV) approach is a widely used way to estimate the causal effects of a treatment on an outcome of interest from observational data with latent confounders. A standard IV is expected to be related to the treatment variable and independent of all other variables in the system. However, it is challenging to search for a standard IV from data directly due to the strict conditions. The conditional IV (CIV) method has been proposed to allow a variable to be an instrument conditioning on a set of variables, allowing a wider choice of possible IVs and enabling broader practical applications of the IV approach. Nevertheless, there is not a data-driven method to discover a CIV and its conditioning set directly from data. To fill this gap, in this paper, we propose to learn the representations of the information of a CIV and its conditioning set from data with latent confounders for average causal effect estimation. By taking advantage of deep generative models, we develop a novel data-driven approach for simultaneously learning the representation of a CIV from measured variables and generating the representation of its conditioning set given measured variables. Extensive experiments on synthetic and real-world datasets show that our method outperforms the existing IV methods.
-                        </p>
-                    </div>
-                </div>
 
                 <div class="pubs" paper-year="2023" paper-select="true" topic="">
-                    <strong>[C05] Learning Conditional Instrumental Variable Representation for Causal Effect Estimation </strong>
-                    <br> Debo Cheng*, <b>Ziqi Xu*</b>, Jiuyong Li, Lin Liu, Thuc Duy Le and Jixue Liu
-                    <br> In Proceedings of the Joint European Conference on Machine Learning and Knowledge Discovery in Databases (<b>ECML-PKDD 2023</b>)
+                    <strong>[C03] Learning Conditional Instrumental Variable Representation for Causal Effect Estimation
+                    </strong>
+                    <br> Debo Cheng, <b>Ziqi Xu</b>, Jiuyong Li, Lin Liu, Thuc Duy Le and Jixue Liu [<b>Co-first Author</b>]
+                    <br> In Proceedings of the Joint European Conference on Machine Learning and Knowledge Discovery in
+                    Databases (<b>ECML-PKDD 2023</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('DVAE.CIV-abs')">Abstract</a>]
                     [<a href="./paper/DVAE.CIV.pdf">PDF</a>]
                     [<a href="https://github.com/IRON13/DVAE.CIV">Code</a>]
                     <div id="DVAE.CIV-abs" style="display:none">
                         <p style="text-align: justify;">
-                            One of the fundamental challenges in causal inference is to estimate the causal effect of a treatment on its outcome of interest from observational data. However, causal effect estimation often suffers from the impacts of confounding bias caused by unmeasured confounders that affect both the treatment and the outcome. The instrumental variable (IV) approach is a powerful way to eliminate the confounding bias from latent confounders. However, the existing IV-based estimators require a nominated IV, and for a conditional IV (CIV) the corresponding conditioning set too, for causal effect estimation. This limits the application of IV-based estimators. In this paper, by leveraging the advantage of disentangled representation learning, we propose a novel method, named DVAE.CIV, for learning and disentangling the representations of CIV and the representations of its conditioning set for causal effect estimations from data with latent confounders. Extensive experimental results on both synthetic and real-world datasets demonstrate the superiority of the proposed DVAE.CIV method against the existing causal effect estimators.
+                            One of the fundamental challenges in causal inference is to estimate the causal effect of a
+                            treatment on its outcome of interest from observational data. However, causal effect
+                            estimation often suffers from the impacts of confounding bias caused by unmeasured
+                            confounders that affect both the treatment and the outcome. The instrumental variable (IV)
+                            approach is a powerful way to eliminate the confounding bias from latent confounders.
+                            However, the existing IV-based estimators require a nominated IV, and for a conditional IV
+                            (CIV) the corresponding conditioning set too, for causal effect estimation. This limits the
+                            application of IV-based estimators. In this paper, by leveraging the advantage of
+                            disentangled representation learning, we propose a novel method, named DVAE.CIV, for
+                            learning and disentangling the representations of CIV and the representations of its
+                            conditioning set for causal effect estimations from data with latent confounders. Extensive
+                            experimental results on both synthetic and real-world datasets demonstrate the superiority
+                            of the proposed DVAE.CIV method against the existing causal effect estimators.
                         </p>
                     </div>
                 </div>
 
                 <div class="pubs" paper-year="2023" paper-select="true" topic="application">
-                    <strong>[C04] Disentangled Representation with Causal Constraints for Counterfactual Fairness </strong>
+                    <strong>[C02] Disentangled Representation with Causal Constraints for Counterfactual Fairness
+                    </strong>
                     <br> <b>Ziqi Xu</b>, Jixue Liu, Debo Cheng, Jiuyong Li, Lin Liu and Ke Wang
-                    <br> In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD 2023</b>)
+                    <br> In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD
+                        2023</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('CF-VAE-abs')">Abstract</a>]
                     [<a href="./paper/CF-VAE.pdf">PDF</a>]
                     [<a href="https://github.com/IRON13/CF-VAE">Code</a>]
                     <div id="CF-VAE-abs" style="display:none">
                         <p style="text-align: justify;">
-                            Much research has been devoted to the problem of learning fair representations; however, they do not explicitly state the relationship between latent representations. In many real-world applications, there may be causal relationships between latent representations. Furthermore, most fair representation learning methods focus on group-level fairness and are based on correlation, ignoring the causal relationships underlying the data. In this work, we theoretically demonstrate that using the structured representations enables downstream predictive models to achieve counterfactual fairness, and then we propose the Counterfactual Fairness Variational AutoEncoder (CF-VAE) to obtain structured representations with respect to domain knowledge. The experimental results show that the proposed method achieves better fairness and accuracy performance than the benchmark fairness methods.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="pubs" paper-year="2023" paper-select="true" topic="">
-                    <strong>[C03] Disentangled Latent Representation Learning for Tackling the Confounding M-Bias Problem in Causal Inference </strong>
-                    <br> Debo Cheng*, Yang Xie*, <b>Ziqi Xu*</b>, Jiuyong Li, Lin Liu, Jixue Liu, Yinghao Zhang and Zaiwen Feng
-                    <br> In Proceedings of the IEEE International Conference on Data Mining (<b>ICDM 2023, Long paper</b>)
-                    <br> [<a href="javascript:void(0)" onclick="display('DLRCE-abs')">Abstract</a>]
-                    [<a href="./paper/DLRCE.pdf">PDF</a>]
-                    <div id="DLRCE-abs" style="display:none">
-                        <p style="text-align: justify;">
-                            In causal inference, it is a fundamental task to estimate the causal effect from observational data. However, latent confounders pose major challenges in causal inference in observational data, for example, confounding bias and M-bias. Recent data-driven causal effect estimators tackle the confounding bias problem via balanced representation learning, but assume no M-bias in the system, thus they fail to handle the M-bias. In this paper, we identify a challenging and unsolved problem caused by a variable that leads to confounding bias and M-bias simultaneously. To address this problem with co-occurring M-bias and confounding bias, we propose a novel Disentangled Latent Representation learning framework for learning latent representations from proxy variables for unbiased Causal effect Estimation (DLRCE) from observational data. Specifically, DLRCE learns three sets of latent representations from the measured proxy variables to adjust for the confounding bias and M-bias. Extensive experiments on both synthetic and three real-world datasets demonstrate that DLRCE significantly outperforms the state-of-the-art estimators in the case of the presence of both confounding bias and M-bias.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="pubs" paper-year="2023" paper-select="true" topic="">
-                    <strong>[C02] A Data-Driven Approach to Finding K for K Nearest Neighbor Matching in Average Causal Effect Estimation </strong>
-                    <br> Tingting Xu, Yinghao Zhang, Jiuyong Li, Lin Liu, <b>Ziqi Xu</b>, Debo Cheng and Zaiwen Feng
-                    <br> In Proceedings of the International Conference on Web Information Systems Engineering (<b>WISE 2023</b>)
-                    <br> [<a href="javascript:void(0)" onclick="display('DK-NNM-abs')">Abstract</a>]
-                    [<a href="./paper/DK-NNM.pdf">PDF</a>]
-                    <div id="DK-NNM-abs" style="display:none">
-                        <p style="text-align: justify;">
-                            In causal inference, a fundamental task is to estimate causal effects using observational data with confounding variables. K Nearest Neighbor Matching (K-NNM) is a commonly used method to address confounding bias. However, the traditional K-NNM method uses the same K value for all units, which may result in unacceptable performance in real-world applications. To address this issue, we propose a novel nearest-neighbor matching method called DK-NNM, which uses a data-driven approach to searching for the optimal K values for different units. DK-NNM first reconstructs a sparse coefficient matrix of all units via sparse representation learning for finding the optimal K value for each unit. Then, the joint propensity scores and prognostic scores are utilized to deal with high-dimensional covariates when performing K nearest-neighbor matching with the obtained K value for a unit. Extensive experiments are conducted on both semi-synthetic and real-world datasets, and the results demonstrate that the proposed DK-NNM method outperforms the state-of-the-art causal effect estimation methods in estimating average causal effects from observational data.
+                            Much research has been devoted to the problem of learning fair representations; however,
+                            they do not explicitly state the relationship between latent representations. In many
+                            real-world applications, there may be causal relationships between latent representations.
+                            Furthermore, most fair representation learning methods focus on group-level fairness and are
+                            based on correlation, ignoring the causal relationships underlying the data. In this work,
+                            we theoretically demonstrate that using the structured representations enables downstream
+                            predictive models to achieve counterfactual fairness, and then we propose the Counterfactual
+                            Fairness Variational AutoEncoder (CF-VAE) to obtain structured representations with respect
+                            to domain knowledge. The experimental results show that the proposed method achieves better
+                            fairness and accuracy performance than the benchmark fairness methods.
                         </p>
                     </div>
                 </div>
@@ -355,13 +656,22 @@
 
                 <div class="pubs" paper-year="2022" paper-select="true" topic="">
                     <strong>[C01] Assessing Classifier Fairness with Collider Bias </strong>
-                    <br> Zhenlong Xu*, <b>Ziqi Xu*</b>, Jixue Liu, Debo Cheng, Jiuyong Li, Lin Liu and Ke Wang
-                    <br> In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD 2022</b>)
+                    <br> Zhenlong Xu, <b>Ziqi Xu</b>, Jixue Liu, Debo Cheng, Jiuyong Li, Lin Liu and Ke Wang [<b>Co-first Author</b>]
+                    <br> In Proceedings of the Pacific-Asia Conference on Knowledge Discovery and Data Mining (<b>PAKDD
+                        2022</b>)
                     <br> [<a href="javascript:void(0)" onclick="display('Assessing-abs')">Abstract</a>]
                     [<a href="./paper/Assessing.pdf">PDF</a>]
                     <div id="Assessing-abs" style="display:none">
                         <p style="text-align: justify;">
-                            The increasing application of machine learning techniques in everyday decision-making processes has brought concerns about the fairness of algorithmic decision-making. This paper concerns the problem of collider bias which produces spurious associations in fairness assessment and develops theorems to guide fairness assessment avoiding the collider bias. We consider a real-world application of auditing a trained classifier by an audit agency. We propose an unbiased assessment algorithm by utilising the developed theorems to reduce collider biases in the assessment. Experiments and simulations show the proposed algorithm reduces collider biases significantly in the assessment and is promising in auditing trained classifiers.
+                            The increasing application of machine learning techniques in everyday decision-making
+                            processes has brought concerns about the fairness of algorithmic decision-making. This paper
+                            concerns the problem of collider bias which produces spurious associations in fairness
+                            assessment and develops theorems to guide fairness assessment avoiding the collider bias. We
+                            consider a real-world application of auditing a trained classifier by an audit agency. We
+                            propose an unbiased assessment algorithm by utilising the developed theorems to reduce
+                            collider biases in the assessment. Experiments and simulations show the proposed algorithm
+                            reduces collider biases significantly in the assessment and is promising in auditing trained
+                            classifiers.
                         </p>
                     </div>
                 </div>
@@ -390,15 +700,33 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><a href="https://study.unisa.edu.au/courses/154341">COSC 2676/2752 - Programming Fundamentals for Scientists</a></td>
-                    <td>S1 2025</td>
-                    <td>Course Coordinator</td>
+                    <td><a href="https://www1.rmit.edu.au/browse;ID=052739heparta;STATUS=A?QRY=%2Btype%3Dflexible%20%2Bsubtype%3Dheparta%20%2Btitle%3D(Practical%20Data%20Science)%20&STYPE=ENTIRE">COSC 2670/2738 - Practical Data Science</a></td>
+                    <td>S2 2025</td>
+                    <td>Lecturer</td>
                     <td>RMIT</td>
                 </tr>
             </tbody>
             <tbody>
                 <tr>
-                    <td><a href="https://study.unisa.edu.au/courses/154341">INFS 4019 - Relational Databases and Warehouses</a></td>
+                    <td><a href="https://www1.rmit.edu.au/browse/;CURPOS=1?STYPE=ENTIRE&CLOCATION=Study+at+RMIT%2F&QRY=%2Btype%3Dflexible+%2Bsubtype%3Dheparta+%2Bkeywords%3D%28COSC2110%29+&course=COSC2110&title=&Search=Search">COSC 2110/3125 - Data Mining</a></td>
+                    <td>S2 2025</td>
+                    <td>Lecturer</td>
+                    <td>RMIT</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><a href="https://www1.rmit.edu.au/browse;ID=052878heparta;STATUS=A?QRY=%2Btype%3Dflexible%20%2Bsubtype%3Dheparta%20%2Btitle%3D(Programming%20Fundamentals%20for%20Scientists)%20&STYPE=ENTIRE">COSC 2676/2752 - Programming Fundamentals
+                            for Scientists</a></td>
+                    <td>S1 2025</td>
+                    <td>Course Coordinator & Lecturer</td>
+                    <td>RMIT</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <td><a href="https://study.unisa.edu.au/courses/154341">INFS 4019 - Relational Databases and
+                            Warehouses</a></td>
                     <td>SP5 2023</td>
                     <td>Lecturer & Tutor</td>
                     <td>UniSA</td>
@@ -414,7 +742,8 @@
             </tbody>
             <tbody>
                 <tr>
-                    <td><a href="https://online.unisa.edu.au/courses/163541">COMP1043 - Problem Solving and Programming</a></td>
+                    <td><a href="https://online.unisa.edu.au/courses/163541">COMP1043 - Problem Solving and
+                            Programming</a></td>
                     <td>SP1, SP4 & SP6 2023</td>
                     <td>Tutor</td>
                     <td>UniSA</td>
@@ -422,8 +751,9 @@
             </tbody>
 
             <tbody>
-                <tr> 
-                    <td><a href="https://study.unisa.edu.au/courses/012517">INFS 2011 - Database for the Enterprise</a></td>
+                <tr>
+                    <td><a href="https://study.unisa.edu.au/courses/012517">INFS 2011 - Database for the Enterprise</a>
+                    </td>
                     <td>SP2 2023 | SP4 2024</td>
                     <td>Tutor</td>
                     <td>UniSA</td>
@@ -431,24 +761,26 @@
             </tbody>
 
             <tbody>
-                <tr> 
-                    <td><a href="https://online.unisa.edu.au/courses/171417">INFT 2067 - Data Acquisition and Wrangling</a></td>
+                <tr>
+                    <td><a href="https://online.unisa.edu.au/courses/171417">INFT 2067 - Data Acquisition and
+                            Wrangling</a></td>
                     <td>SP1 & SP4 2024</td>
                     <td>Tutor</td>
                     <td>UniSA</td>
                 </tr>
             </tbody>
 
-            
+
 
             <tbody>
                 <tr>
-                    <td><a href="https://online.unisa.edu.au/courses/171435">INFS 3087 - Advanced Topics in Data Analytics</a></td>
+                    <td><a href="https://online.unisa.edu.au/courses/171435">INFS 3087 - Advanced Topics in Data
+                            Analytics</a></td>
                     <td>SP1 2024</td>
                     <td>Tutor</td>
                     <td>UniSA</td>
                 </tr>
-            </tbody>  
+            </tbody>
 
 
             <tbody>
@@ -458,11 +790,12 @@
                     <td>Tutor</td>
                     <td>UniSA</td>
                 </tr>
-            </tbody>  
+            </tbody>
 
             <tbody>
                 <tr>
-                    <td><a href="https://online.unisa.edu.au/courses/163541">INFS 3089 - Text and Social Media Analytics</a></td>
+                    <td><a href="https://online.unisa.edu.au/courses/163541">INFS 3089 - Text and Social Media
+                            Analytics</a></td>
                     <td>SP3 2023</td>
                     <td>Tutor</td>
                     <td>UniSA</td>
@@ -470,10 +803,10 @@
             </tbody>
 
 
-            
+
         </table>
 
-        <span id="service" name="service">
+<!--         <span id="service" name="service">
             <h3> Academic Services </h3>
         </span>
         <table class="table table-hover">
@@ -532,7 +865,7 @@
                     <td><a href="https://neurips.cc/">NeurIPS 2024</a></td>
                 </tr>
             </tbody>
-            
+
             <tbody>
                 <tr>
                     <td>Program Committee Member</td>
@@ -564,16 +897,33 @@
                     <td><a href="https://proceedings.mlr.press/v218/le23a.html">KDD 2023</a></td>
                 </tr>
             </tbody>
-        </table> 
+        </table> -->
 
 
-        
+
 
 
         <span id="awards" name="awards">
             <h3> Awards </h3>
         </span>
         <table class="table table-hover">
+
+            <tbody>
+                <tr>
+                    <td>Top five courses with highest OSI</td>
+                    <td>2025</td>
+                    <td>RMIT University</td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>Top 10% of reviewers</td>
+                    <td>2025</td>
+                    <td>ACM SIGKDD Conference on Knowledge Discovery and Data Mining</td>
+                </tr>
+            </tbody>
+
             <tbody>
                 <tr>
                     <td>AAAI Student Scholarships</td>
@@ -583,7 +933,7 @@
             </tbody>
 
             <tbody>
-                <tr> 
+                <tr>
                     <td>University President's Scholarships (UPS)</td>
                     <td>2021</td>
                     <td>University of South Australia</td>
@@ -591,7 +941,7 @@
             </tbody>
 
             <tbody>
-                <tr> 
+                <tr>
                     <td>Global Citizens Scholarship</td>
                     <td>2020</td>
                     <td>University of Adelaide</td>
@@ -612,7 +962,7 @@
                     <td>2017</td>
                     <td>Liaoning Petrochemical University</td>
                 </tr>
-            </tbody>  
+            </tbody>
 
 
             <tbody>
@@ -622,7 +972,7 @@
                     <td>China National Petroleum Corporation</td>
                 </tr>
             </tbody>
-        </table>  
+        </table>
 
 
     </div>
@@ -631,7 +981,8 @@
             <p class="text-muted">Last updated by Ziqi Xu, Jan. 2025.</p>
         </div>
         <div class="container" style="text-align: center; padding-top: 15px; padding-bottom: 15px;">
-            <a href="https://clustrmaps.com/site/1bz2o" title="Visit tracker"><img src="//clustrmaps.com/map_v2.png?cl=ffffff&w=450&t=n&d=erecJ92Hf11cKbSCSQtOlqHdENLQx1ZSQP3uX8tGl54&co=2d78ad&ct=ffffff" /></a>
+            <a href="https://clustrmaps.com/site/1bz2o" title="Visit tracker"><img loading="lazy"
+                    src="//clustrmaps.com/map_v2.png?cl=ffffff&w=450&t=n&d=erecJ92Hf11cKbSCSQtOlqHdENLQx1ZSQP3uX8tGl54&co=2d78ad&ct=ffffff" /></a>
         </div>
     </footer>
 
@@ -639,8 +990,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
-    <script src="./index_files/bootstrap.min.js"></script>
-    <script src="./js/ziqi.js"></script>
+    <script defer src="./index_files/bootstrap.min.js"></script>
+    <script defer src="./js/ziqi.js"></script>
     <script type="text/javascript"></script>
 </body>
 
