@@ -1,0 +1,358 @@
+{
+  "edition": "ICORE2026",
+  "source": "https://portal.core.edu.au/conf-ranks/?search=&by=all&source=ICORE2026&do=Export",
+  "checked": "2026-10-05",
+  "venues": {
+    "SIGSPATIAL": {
+      "name": "ACM International Conference on Advances in Geographic Information Systems",
+      "rank": "A",
+      "url": "https://portal.core.edu.au/conf-ranks/22/"
+    },
+    "CIKM": {
+      "name": "ACM International Conference on Information and Knowledge Management",
+      "rank": "A",
+      "url": "https://portal.core.edu.au/conf-ranks/25/"
+    },
+    "KDD": {
+      "name": "ACM International Conference on Knowledge Discovery and Data Mining",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/26/"
+    },
+    "SIGIR": {
+      "name": "ACM International Conference on Research and Development in Information Retrieval",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/29/"
+    },
+    "IWCMC": {
+      "name": "ACM International Wireless Communications and Mobile Computing Conference",
+      "rank": "B",
+      "url": "https://portal.core.edu.au/conf-ranks/34/"
+    },
+    "ACL": {
+      "name": "Association for Computational Linguistics",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/196/"
+    },
+    "ADC": {
+      "name": "Australasian Database Conference",
+      "rank": "Australasian B",
+      "url": "https://portal.core.edu.au/conf-ranks/219/"
+    },
+    "AISC": {
+      "name": "Australasian Information Security Conference",
+      "rank": "Australasian C",
+      "url": "https://portal.core.edu.au/conf-ranks/222/"
+    },
+    "AI": {
+      "name": "Australasian Joint Conference on Artificial Intelligence",
+      "rank": "Australasian B",
+      "url": "https://portal.core.edu.au/conf-ranks/224/"
+    },
+    "EACL": {
+      "name": "European Association for Computational Linguistics",
+      "rank": "A",
+      "url": "https://portal.core.edu.au/conf-ranks/468/"
+    },
+    "ECML PKDD": {
+      "name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Database (PKDD and ECML combined from 2008)",
+      "rank": "A",
+      "url": "https://portal.core.edu.au/conf-ranks/491/"
+    },
+    "ICDM": {
+      "name": "IEEE International Conference on Data Mining",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/642/"
+    },
+    "ICLR": {
+      "name": "International Conference on Learning Representations",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/2273/"
+    },
+    "ICML": {
+      "name": "International Conference on Machine Learning",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/1121/"
+    },
+    "WISE": {
+      "name": "International Conference on Web Information Systems Engineering",
+      "rank": "B",
+      "url": "https://portal.core.edu.au/conf-ranks/1271/"
+    },
+    "IJCAI": {
+      "name": "International Joint Conference on Artificial Intelligence",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/1313/"
+    },
+    "WWW": {
+      "name": "International World Wide Web Conference",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/1548/"
+    },
+    "AAAI": {
+      "name": "National Conference of the American Association for Artificial Intelligence",
+      "rank": "A*",
+      "url": "https://portal.core.edu.au/conf-ranks/1629/"
+    },
+    "PAKDD": {
+      "name": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+      "rank": "B",
+      "url": "https://portal.core.edu.au/conf-ranks/1667/"
+    },
+    "ICWS": {
+      "name": "IEEE International Conference on Web Services",
+      "rank": "A",
+      "url": "https://portal.core.edu.au/conf-ranks/678/"
+    }
+  },
+  "policy": "https://portal.core.edu.au/conf-changes/serve_file/icore-addition.pdf/",
+  "dblpVenueAliases": {
+    "ijcai": "IJCAI",
+    "kdd": "KDD",
+    "sigir": "SIGIR",
+    "www": "WWW",
+    "iwcmc": "IWCMC",
+    "eacl": "EACL",
+    "auisc": "AISC",
+    "aaai": "AAAI",
+    "adc": "ADC",
+    "ausai": "AI",
+    "cikm": "CIKM",
+    "gis": "SIGSPATIAL",
+    "acl": "ACL",
+    "icml": "ICML",
+    "iclr": "ICLR",
+    "icdm": "ICDM",
+    "wise": "WISE",
+    "pkdd": "ECML PKDD",
+    "pakdd": "PAKDD",
+    "icws": "ICWS"
+  },
+  "papers": {
+    "DBLP:conf/ijcai/LiCYXXSSL26": {
+      "venue": "IJCAI",
+      "track": "full",
+      "source": "https://doi.org/10.24963/ijcai.2026/621"
+    },
+    "DBLP:conf/kdd/LiYXXSY26": {
+      "venue": "KDD",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3770855.3817995"
+    },
+    "DBLP:conf/kdd/RenYLZZXKLX26": {
+      "venue": "KDD",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3770855.3818900"
+    },
+    "DBLP:conf/sigir/RabookiXN26": {
+      "venue": "SIGIR",
+      "track": "short",
+      "source": "https://www.linkedin.com/posts/ziqi-xu-846510113_excited-to-share-that-our-recent-work-activity-7445813588335947776-OX-Z"
+    },
+    "DBLP:conf/sigir/YangXLMCSZR26": {
+      "venue": "SIGIR",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3805712.3809679"
+    },
+    "DBLP:conf/sigir/WanyanMHXC26": {
+      "venue": "SIGIR",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3805712.3809707"
+    },
+    "DBLP:conf/www/GaoDCGBLX26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3792998"
+    },
+    "DBLP:conf/www/LuoHTRXHDX26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3792169"
+    },
+    "DBLP:conf/www/LuoYHQHXYZX26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3793004"
+    },
+    "DBLP:conf/www/ZhangYXZRDC26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3792493"
+    },
+    "DBLP:conf/www/ZhangMSXYLZW26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3792495"
+    },
+    "DBLP:conf/www/RenDLXZJMXX26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3793044"
+    },
+    "DBLP:conf/www/HuangLSXSL26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3792634"
+    },
+    "DBLP:conf/www/RenLXLYYFLX26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3793061"
+    },
+    "DBLP:conf/www/RenLXZFL26": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3774904.3792358"
+    },
+    "DBLP:conf/iwcmc/ChenZZHHLX26": {
+      "venue": "IWCMC",
+      "track": "full",
+      "source": "https://doi.org/10.1109/IWCMC69287.2026.11579919"
+    },
+    "DBLP:conf/eacl/LiXRLZZRX26": {
+      "venue": "EACL",
+      "track": "findings",
+      "source": "https://aclanthology.org/2026.findings-eacl.234/"
+    },
+    "DBLP:conf/auisc/XieLFGXH26": {
+      "venue": "AISC",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3793638.3793648"
+    },
+    "DBLP:conf/aaai/GaoCDYBX26": {
+      "venue": "AAAI",
+      "track": "full",
+      "source": "https://doi.org/10.1609/aaai.v40i45.41189"
+    },
+    "DBLP:conf/aaai/NguyenXCHXZ26": {
+      "venue": "AAAI",
+      "track": "full",
+      "source": "https://doi.org/10.1609/aaai.v40i38.40532"
+    },
+    "DBLP:conf/aaai/SongYXLSX26": {
+      "venue": "AAAI",
+      "track": "full",
+      "source": "https://doi.org/10.1609/aaai.v40i30.39750"
+    },
+    "DBLP:conf/adc/RabookiXNX25": {
+      "venue": "ADC",
+      "track": "full",
+      "source": "https://doi.org/10.1007/978-981-95-6196-4\\_12"
+    },
+    "DBLP:conf/ausai/KandanaarachchiXWS25": {
+      "venue": "AI",
+      "track": "full",
+      "source": "https://doi.org/10.1007/978-981-95-4969-6\\_27"
+    },
+    "DBLP:conf/cikm/Oldfield0K25": {
+      "venue": "CIKM",
+      "track": "resource",
+      "source": "https://cikm2025.org/program/accepted-papers"
+    },
+    "DBLP:conf/cikm/WanyanHM0C25": {
+      "venue": "CIKM",
+      "track": "short",
+      "source": "https://cikm2025.org/program/accepted-papers"
+    },
+    "DBLP:conf/cikm/ZhaoZ0R0LF025": {
+      "venue": "CIKM",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3746252.3761103"
+    },
+    "DBLP:conf/gis/Zhao0C0S25": {
+      "venue": "SIGSPATIAL",
+      "track": "short",
+      "source": "https://sigspatial2025.sigspatial.org/short-paper-accepted/"
+    },
+    "DBLP:conf/acl/YangZ0XZSL025": {
+      "venue": "ACL",
+      "track": "full",
+      "source": "https://doi.org/10.18653/v1/2025.acl-long.1275"
+    },
+    "DBLP:conf/sigir/Ma0RHC25": {
+      "venue": "SIGIR",
+      "track": "short",
+      "source": "https://sigir2025.dei.unipd.it/accepted-papers.html"
+    },
+    "DBLP:conf/icml/DuLC0GC025": {
+      "venue": "ICML",
+      "track": "full",
+      "source": "https://proceedings.mlr.press/v267/du25c.html"
+    },
+    "DBLP:conf/www/XuKON25": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3696410.3714883"
+    },
+    "DBLP:conf/www/WangLL0LCC25": {
+      "venue": "WWW",
+      "track": "full",
+      "source": "https://doi.org/10.1145/3696410.3714924"
+    },
+    "DBLP:conf/www/XuMRC0X25": {
+      "venue": "WWW",
+      "track": "companion",
+      "source": "https://doi.org/10.1145/3701716.3715540"
+    },
+    "DBLP:conf/ausai/GaoXLLLLCZC24": {
+      "venue": "AI",
+      "track": "full",
+      "source": "https://doi.org/10.1007/978-981-96-0348-0\\_21"
+    },
+    "DBLP:conf/iclr/XuCLL0Y24": {
+      "venue": "ICLR",
+      "track": "full",
+      "source": "https://openreview.net/forum?id=wFf9m4v7oC"
+    },
+    "DBLP:conf/iclr/ChengXL0LL24": {
+      "venue": "ICLR",
+      "track": "full",
+      "source": "https://openreview.net/forum?id=qDhq1icpO8"
+    },
+    "DBLP:conf/aaai/ChengXLLLGL24": {
+      "venue": "AAAI",
+      "track": "full",
+      "source": "https://doi.org/10.1609/aaai.v38i10.29029"
+    },
+    "DBLP:conf/icdm/ChengXXLLLZF23": {
+      "venue": "ICDM",
+      "track": "full",
+      "source": "https://doi.org/10.1109/ICDM58522.2023.00014"
+    },
+    "DBLP:conf/wise/XuZLLXCF23": {
+      "venue": "WISE",
+      "track": "full",
+      "source": "https://doi.org/10.1007/978-981-99-7254-8\\_56"
+    },
+    "DBLP:conf/pkdd/ChengXLLLL23": {
+      "venue": "ECML PKDD",
+      "track": "full",
+      "source": "https://doi.org/10.1007/978-3-031-43412-9\\_31"
+    },
+    "DBLP:conf/pakdd/XuLCLLW23": {
+      "venue": "PAKDD",
+      "track": "full",
+      "source": "https://doi.org/10.1007/978-3-031-33374-3\\_37"
+    },
+    "DBLP:conf/aaai/ChengXLLLL23": {
+      "venue": "AAAI",
+      "track": "full",
+      "source": "https://doi.org/10.1609/aaai.v37i6.25869"
+    },
+    "DBLP:conf/aaai/XuCLLLW23": {
+      "venue": "AAAI",
+      "track": "full",
+      "source": "https://doi.org/10.1609/aaai.v37i9.26266"
+    },
+    "DBLP:conf/pakdd/XuXLCLLW22": {
+      "venue": "PAKDD",
+      "track": "full",
+      "source": "https://doi.org/10.1007/978-3-031-05936-0\\_21"
+    },
+    "DBLP:conf/icws/ZhangLHYLXX26": {
+      "venue": "ICWS",
+      "track": "full",
+      "source": "https://services.conferences.computer.org/2026/icws-program/",
+      "evidence": "Official ICWS 2026 program identifies this paper as CWS_REG_309 (regular paper), rather than CWS_SHT (short paper)."
+    }
+  }
+}
