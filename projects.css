@@ -1,0 +1,4 @@
+.funding-summary { margin: 0 0 16px; padding: 12px 16px; background: var(--soft); border-left: 3px solid var(--accent); border-radius: 0 5px 5px 0; }
+.funding-summary-label { color: var(--accent); font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.funding-summary-total { color: var(--accent); margin-bottom: 6px; }
+.funding-summary-category { font-size: 15px; line-height: 1.5; margin-top: 4px; }

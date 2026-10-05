@@ -1,0 +1,48 @@
+/* Styles apply only to the publication lists. The shared template is unchanged. */
+.publication-note { color: var(--muted); font-size: 14px; }
+.publication-list { padding-left: 25px; }
+.publication-list li { margin-bottom: 1px; padding-left: 6px; }
+.publication-list p { margin-bottom: 1px; line-height: 1.45; }
+.publication-title { font-weight: 600; font-size: 12px; }
+.publication-authors { font-size: 11px; }
+.publication-link { font-size: 12px; font-weight: 400; white-space: nowrap; }
+ol.publication-list li::marker { font-size: 12px; }
+.publication-venue { color: var(--muted); font-size: 11px; font-style: italic; }
+.publication-authors sup { margin-left: 2px; color: var(--accent); font-size: 11px; line-height: 0; }
+.publication-demo { display: inline-block; color: var(--muted); font-size: 12px; }
+
+#layout-content > section[aria-labelledby] h2 { margin-top: 24px; margin-bottom: 12px; padding-bottom: 8px; }
+.publication-note { margin-bottom: 12px; }
+
+#conference-metrics { margin: 0 0 16px; padding: 12px 16px; background: var(--soft); border-left: 3px solid var(--accent); border-radius: 0 5px 5px 0; }
+.conference-metrics-row { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; }
+.conference-metrics-label { color: var(--accent); font-size: 14px; font-weight: 600; }
+.conference-metric { color: var(--ink); font-size: 15px; line-height: 1.5; }
+.conference-metric-total { color: var(--accent); }
+.conference-metric-breakdown { color: var(--ink); font-size: 14px; }
+.conference-metrics-note { margin: 8px 0 0; color: var(--muted); font-size: 12px; line-height: 1.3; }
+
+.conference-ranking-grid { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 0.85fr) minmax(0, 1.3fr); gap: 20px; }
+.conference-ranking-grid > div { min-width: 0; }
+.ccf-metrics, .csrankings-metrics { padding-left: 20px; border-left: 1px solid var(--line); }
+.conference-metric { max-width: 100%; overflow-wrap: anywhere; }
+@media (max-width: 760px) {
+    .conference-ranking-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    .ccf-metrics, .csrankings-metrics { padding-left: 0; border-left: 0; padding-top: 12px; border-top: 1px solid var(--line); }
+}
+
+.conference-metric-toggle { padding: 0; border: 0; background: transparent; font: inherit; font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.conference-metric-toggle:hover { color: var(--ink); }
+.conference-metric-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.conference-metric-breakdown[hidden] { display: none; }
+
+.csrankings-area .conference-metric { display: block; font-size: 14px; }
+
+.publication-heading { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+.publication-tags { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 6px; font-size: 14px; font-weight: 500; }
+.publication-tags a { padding: 3px 9px; background: var(--soft); border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+.publication-tags a:hover, .publication-tags a:focus-visible { background: var(--accent); color: white; }
+#accepted-heading, #conference-heading, #journal-heading { scroll-margin-top: 20px; }
+
+.accepted-publications .publication-title,
+.accepted-publications .publication-venue { line-height: 1.4; }

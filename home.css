@@ -1,0 +1,13 @@
+.news-panel {
+    height: 180px;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scrollbar-gutter: stable;
+    padding-right: 12px;
+}
+.news-panel:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+}
+.news-list { font-size: 14px; }
+.news-list li { margin-bottom: 1px; }

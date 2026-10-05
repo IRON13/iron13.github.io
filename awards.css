@@ -1,0 +1,13 @@
+.awards-table { width: 100%; border-collapse: collapse; text-align: left; }
+.awards-table th, .awards-table td { padding: 12px 14px 12px 0; vertical-align: top; border-bottom: 1px solid var(--line); }
+.awards-table thead th { color: var(--muted); font-size: 14px; font-weight: 500; }
+.awards-table tbody th { width: 45%; font-weight: 600; }
+.award-year { white-space: nowrap; }
+.award-institution { color: var(--muted); }
+@media (max-width: 640px) {
+    .awards-table thead { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); }
+    .awards-table tbody, .awards-table tr { display: block; }
+    .awards-table tbody tr { padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .awards-table tbody th, .awards-table td { display: block; width: auto; border: 0; padding: 0; }
+    .awards-table .award-year { margin-top: 3px; }
+}
