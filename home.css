@@ -1,13 +1,75 @@
-.news-panel {
-    height: 180px;
-    overflow-y: auto;
-    overscroll-behavior-y: contain;
-    scrollbar-gutter: stable;
-    padding-right: 12px;
-}
-.news-panel:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 4px;
-}
 .news-list { font-size: 14px; }
 .news-list li { margin-bottom: 1px; }
+.news-list .news-highlight::marker { content: "📌 "; }
+.news-panel:not(.expanded) .news-list > li:nth-child(n + 6) { display: none; }
+.news-toggle { display: inline-flex; align-items: center; gap: 5px; margin: 10px 0 0; padding: 2px 0; color: var(--accent); background: transparent; border: 0; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; }
+.news-toggle:hover .news-toggle-label { text-decoration: underline; text-underline-offset: 3px; }
+.news-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.news-toggle-arrow { font-size: 12px; }
+.news-toggle[aria-expanded="true"] .news-toggle-arrow { transform: rotate(90deg); }
+.news-toggle[hidden] { display: none; }
+
+.highlight-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.highlight-card { min-width: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.highlight-card[hidden] { display: none; }
+.highlight-image { position: relative; background: #f4f7fb; padding: 12px; border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: center; }
+.highlight-image img { width: 100%; height: 160px; display: block; object-fit: contain; }
+.highlight-image > span { position: absolute; bottom: 3px; right: 9px; font-size: 9px; color: var(--muted); }
+.highlight-card-body { padding: 13px 15px 16px; display: flex; flex-direction: column; flex: 1; }
+.highlight-venue { color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: .2px; line-height: 1.25; }
+.highlight-status { display: inline-block; margin-top: 4px; padding: 2px 7px; border-radius: 10px; background: #fff3e2; color: #9a570d; font-size: 10px; font-weight: 600; line-height: 1.25; }
+.highlight-card h3 { margin: 7px 0 10px; font-size: 13px; line-height: 1.25; }
+.highlight-card h3 a { color: var(--ink); }
+.highlight-card p { margin: 0 0 12px; color: var(--muted); font-size: 13px; line-height: 1.25; }
+.highlight-paper-link { margin-top: auto; align-self: flex-start; font-size: 11px; }
+@media (min-width: 641px) and (max-width: 1000px) {
+    .highlight-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+    .highlight-grid { grid-template-columns: minmax(0, 1fr); }
+    .highlight-card { grid-template-columns: minmax(0, 1fr); }
+    .highlight-image { border-right: 0; border-bottom: 1px solid var(--line); }
+}
+
+.visitor-card { border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px 14px; }
+.visitor-card-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; font-weight: 600; }
+.visitor-preview { color: var(--muted); font-size: 11px; font-weight: 400; background: var(--soft); border-radius: 4px; padding: 2px 7px; }
+.visitor-metrics { display: flex; gap: 36px; margin: 15px 0 18px; }
+.visitor-metrics > div { display: flex; flex-direction: column; }
+.visitor-metrics strong { color: var(--accent); font-size: 24px; line-height: 1.3; }
+.visitor-metrics span { color: var(--muted); font-size: 12px; }
+.visitor-chart-layout { display: grid; grid-template-columns: minmax(0, 1fr) 150px; align-items: center; gap: 24px; }
+.visitor-map { position: relative; min-width: 0; }
+.visitor-map > img { display: block; width: 100%; height: auto; }
+.visitor-points { position: absolute; top: 0; left: 0; width: 100%; height: auto; }
+.visitor-points circle { fill: var(--accent); fill-opacity: .7; stroke: white; stroke-width: 2; cursor: help; }
+.visitor-points circle:hover { fill-opacity: 1; stroke-width: 3; }
+.visitor-map-note { margin: 8px 0 0; color: var(--muted); font-size: 11px; }
+.visitor-map-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 4px; }
+.visitor-countries { list-style: none; padding: 0; margin: 0; }
+.visitor-countries li { display: grid; grid-template-columns: 1fr auto; gap: 4px 8px; padding: 0; margin: 0 0 8px; font-size: 12px; line-height: 1.4; }
+.visitor-countries b { font-weight: 500; color: var(--accent); }
+.visitor-countries i { grid-column: 1 / -1; height: 3px; background: linear-gradient(to right, #6289b0 var(--share), var(--soft) var(--share)); border-radius: 2px; }
+.visitor-disclaimer { margin: 14px 0 0; font-size: 11px; color: var(--muted); }
+.visitor-section { margin-top: 28px; }
+.visitor-section h2 { margin: 0 0 10px; padding-bottom: 7px; font-size: 14px; }
+.visitor-section .visitor-card { padding: 10px; }
+.visitor-section .visitor-card-header { flex-direction: column; align-items: flex-start; gap: 3px; font-size: 12px; }
+.visitor-section .visitor-preview { font-size: 10px; padding: 0; background: transparent; }
+.visitor-section .visitor-metrics { gap: 7px; justify-content: space-between; margin: 10px 0 12px; }
+.visitor-section .visitor-metrics strong { font-size: 17px; }
+.visitor-section .visitor-metrics span { font-size: 9px; line-height: 1.4; }
+.visitor-section .visitor-chart-layout { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.visitor-section .visitor-countries { display: block; }
+.visitor-section .visitor-countries li { font-size: 10px; margin-bottom: 6px; }
+.visitor-section .visitor-map-note { font-size: 9px; line-height: 1.4; }
+.visitor-section .visitor-disclaimer { font-size: 9px; line-height: 1.4; margin-top: 10px; }
+@media (max-width: 640px) {
+    #layout-menu .visitor-section { flex-basis: 100%; max-width: 280px; margin-top: 16px; }
+    .visitor-card { padding: 14px; }
+    .visitor-card-header { flex-wrap: wrap; }
+    .visitor-metrics { gap: 20px; }
+    .visitor-metrics strong { font-size: 21px; }
+    .visitor-chart-layout { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    .visitor-countries { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+}

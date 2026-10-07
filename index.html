@@ -4,8 +4,9 @@
     <link rel="icon" type="image/png" href="icons/RMIT.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css?v=20261005-2">
-    <link rel="stylesheet" href="home.css?v=20261005-2">
+    <link rel="stylesheet" href="style.css?v=20261007-3">
+    <link rel="stylesheet" href="home.css?v=20261007-15">
+    <script src="js/news.js?v=20261007-2" defer></script>
     <title>Ziqi Xu — Home</title>
 </head>
 <body>
@@ -19,6 +20,40 @@
     <div class="menu-item"><a href="groups.html">Group</a></div>
     <div class="menu-item"><a href="service.html">Service</a></div>
     <div class="menu-item"><a href="award.html">Awards & Honours</a></div>
+<section aria-labelledby="visitors-heading" class="visitor-section">
+<h2 id="visitors-heading">Visitors</h2>
+<div class="visitor-card">
+    <div class="visitor-card-header"><span>Visitor overview</span><span class="visitor-preview">Preview · sample data</span></div>
+    <div class="visitor-metrics">
+        <div><strong>1,284</strong><span>Page views</span></div>
+        <div><strong>846</strong><span>Visitors</span></div>
+        <div><strong>6</strong><span>Countries / regions</span></div>
+    </div>
+    <div class="visitor-chart-layout">
+        <div class="visitor-map" role="img" aria-label="Sample visitor locations: Australia 312, China 218, United States 144, United Kingdom 86, Singapore 52, Germany 34.">
+            <img src="icons/world-map.svg" alt="" width="720" height="310">
+            <svg viewBox="0 0 720 310" class="visitor-points" aria-hidden="true">
+                <circle cx="636" cy="246" r="12"><title>Australia · 312 visitors</title></circle>
+                <circle cx="592" cy="100" r="10"><title>China · 218 visitors</title></circle>
+                <circle cx="164" cy="92" r="8"><title>United States · 144 visitors</title></circle>
+                <circle cx="356" cy="60" r="6"><title>United Kingdom · 86 visitors</title></circle>
+                <circle cx="568" cy="168" r="5"><title>Singapore · 52 visitors</title></circle>
+                <circle cx="380" cy="68" r="4"><title>Germany · 34 visitors</title></circle>
+            </svg>
+            <p class="visitor-map-note"><span class="visitor-map-dot"></span> Visitor locations · hover over a dot for details</p>
+        </div>
+        <ul class="visitor-countries" aria-label="Sample visitor counts by country">
+            <li><span>Australia</span><b>312</b><i style="--share:100%"></i></li>
+            <li><span>China</span><b>218</b><i style="--share:70%"></i></li>
+            <li><span>United States</span><b>144</b><i style="--share:46%"></i></li>
+            <li><span>United Kingdom</span><b>86</b><i style="--share:28%"></i></li>
+            <li><span>Singapore</span><b>52</b><i style="--share:17%"></i></li>
+            <li><span>Germany</span><b>34</b><i style="--share:11%"></i></li>
+        </ul>
+    </div>
+    <p class="visitor-disclaimer">Sample data for layout preview. Live visitor statistics are not connected.</p>
+</div>
+</section>
 </nav>
 <main id="layout-content">
 <h1>Home</h1>
@@ -55,15 +90,61 @@ I am a Lecturer in Data Science and Artificial Intelligence at the School of Com
 
 <section aria-labelledby="news-heading">
 <h2 id="news-heading">News</h2>
-<div class="news-panel" role="region" aria-labelledby="news-heading" tabindex="0">
-    <ul class="news-list">
-        <li>[09/2026] Fully funded BITS-RMIT PhD (January 2027 intake): Project ID: <strong>BRJP26100105</strong>; Project title: <strong>Agentic Reasoning for Vision-Language-Action Models in Autonomous Robots</strong>. Application deadline: October 10, 2026. [<a href="https://bitspilaniedu.com/rmit/bitsrmitphdwebsite/default.aspx">LINK/HTML</a>]</li>
+<div class="news-panel" role="region" aria-labelledby="news-heading">
+    <ul class="news-list" id="news-list">
+        <li class="news-highlight">[07/2026] CALL FOR PAPERS: <strong>International Workshop on Architecting Agentic AI Systems (AgentArch 2027)</strong>, co-located with IEEE ICSA 2027. Submission deadline: December 20, 2026. [<a href="https://agentarch.org/">HTML</a>]</li>
+        <li class="news-highlight">[09/2026] Fully funded BITS-RMIT PhD (January 2027 intake): Project ID: <strong>BRJP26100105</strong>; Project title: <strong>Agentic Reasoning for Vision-Language-Action Models in Autonomous Robots</strong>. Application deadline: October 10, 2026. [<a href="https://bitspilaniedu.com/rmit/bitsrmitphdwebsite/default.aspx">LINK/HTML</a>]</li>
         <li>[09/2026] Three of our papers (x3) were accepted by <strong>NeurIPS 2026!</strong></li>
         <li>[08/2026] Two of our papers (x2) were accepted by <strong>EMNLP 2026!</strong></li>
         <li>[08/2026] Two of our papers (x2) were accepted by <strong>ICDM 2026!</strong></li>
         <li>[08/2026] Three of our papers (x3) were accepted by <strong>CIKM 2026!</strong></li>
-        <li>[07/2026] CALL FOR PAPERS: <strong>International Workshop on Architecting Agentic AI Systems (AgentArch 2027)</strong>, co-located with IEEE ICSA 2027. Submission deadline: December 20, 2026. [<a href="https://agentarch.org/">HTML</a>]</li>
     </ul>
+    <button class="news-toggle" type="button" aria-expanded="false" aria-controls="news-list" aria-label="Show more news" title="Show more news">
+        <span class="news-toggle-arrow" aria-hidden="true">▸</span><span class="news-toggle-label">Earlier news</span>
+    </button>
+</div>
+</section>
+
+
+
+<section aria-labelledby="highlight-papers-heading" class="highlight-papers">
+<h2 id="highlight-papers-heading">Highlight Papers</h2>
+<div class="highlight-grid">
+    <article class="highlight-card">
+        <div class="highlight-image"><img src="icons/highlights/graph-survey.png" alt="Overview of fairness in augmented graph learning"></div>
+        <div class="highlight-card-body">
+            <div class="highlight-venue">IEEE Transactions on Knowledge and Data Engineering (TKDE)</div>
+            <h3><a href="https://doi.org/10.1109/TKDE.2026.3719932">Fairness in Graph Learning Augmented with Machine Learning: A Survey</a></h3>
+            <p>A survey of fairness challenges and approaches in machine-learning-augmented graph learning.</p>
+            <a class="highlight-paper-link" href="https://doi.org/10.1109/TKDE.2026.3719932">Paper ↗</a>
+        </div>
+    </article>
+    <article class="highlight-card">
+        <div class="highlight-image"><img src="icons/highlights/av-survey.png" alt="Overview of algorithmic fairness in autonomous vehicles"></div>
+        <div class="highlight-card-body">
+            <div class="highlight-venue">IEEE Transactions on Intelligent Transportation Systems (TITS)</div>
+            <h3><a href="https://doi.org/10.1109/TITS.2026.3724834">Artificial Intelligence in Autonomous Vehicles: A Survey From a Fairness Perspective</a></h3>
+            <p>A fairness perspective on artificial intelligence for autonomous vehicles.</p>
+            <a class="highlight-paper-link" href="https://doi.org/10.1109/TITS.2026.3724834">Paper ↗</a>
+        </div>
+    </article>
+    <article class="highlight-card" hidden>
+        <div class="highlight-image"><img src="icons/highlights/anomaly-survey.svg" alt="Concept illustration: Data, Foundation, Anomalies"></div>
+        <div class="highlight-card-body">
+            <div class="highlight-venue">AI Magazine · December 2025</div>
+            <h3><a href="https://doi.org/10.1002/aaai.70045">Foundation Models for Anomaly Detection: Vision and Challenges</a></h3>
+            <p>Exploring the potential and challenges of foundation models for anomaly detection.</p>
+            <a class="highlight-paper-link" href="https://doi.org/10.1002/aaai.70045">Paper ↗</a>
+        </div>
+    </article>
+    <article class="highlight-card">
+        <div class="highlight-image"><img src="icons/highlights/dementia-xgnn.png" alt="Explainable graph neural network workflow for brain connectivity, clinical outcomes and dementia biomarkers"></div>
+        <div class="highlight-card-body">
+            <div class="highlight-venue"><a href="https://dl.acm.org/journal/health">ACM Transactions on Computing for Healthcare</a></div>
+            <h3>Explainable Graph Neural Networks: Understanding Brain Connectivity and Biomarkers in Dementia <span class="highlight-status">Accepted · To Appear</span></h3>
+            <p>Reviewing explainable GNNs for brain connectivity and dementia biomarkers.</p>
+        </div>
+    </article>
 </div>
 </section>
 
