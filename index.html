@@ -5,8 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css?v=20261007-3">
-    <link rel="stylesheet" href="home.css?v=20261007-15">
+    <link rel="stylesheet" href="home.css?v=20261008-1">
     <script src="js/news.js?v=20261007-2" defer></script>
+    <script src="js/visitor-widget.js" defer></script>
     <title>Ziqi Xu — Home</title>
 </head>
 <body>
@@ -22,36 +23,15 @@
     <div class="menu-item"><a href="award.html">Awards & Honours</a></div>
 <section aria-labelledby="visitors-heading" class="visitor-section">
 <h2 id="visitors-heading">Visitors</h2>
-<div class="visitor-card">
-    <div class="visitor-card-header"><span>Visitor overview</span><span class="visitor-preview">Preview · sample data</span></div>
-    <div class="visitor-metrics">
-        <div><strong>1,284</strong><span>Page views</span></div>
-        <div><strong>846</strong><span>Visitors</span></div>
-        <div><strong>6</strong><span>Countries / regions</span></div>
-    </div>
-    <div class="visitor-chart-layout">
-        <div class="visitor-map" role="img" aria-label="Sample visitor locations: Australia 312, China 218, United States 144, United Kingdom 86, Singapore 52, Germany 34.">
-            <img src="icons/world-map.svg" alt="" width="720" height="310">
-            <svg viewBox="0 0 720 310" class="visitor-points" aria-hidden="true">
-                <circle cx="636" cy="246" r="12"><title>Australia · 312 visitors</title></circle>
-                <circle cx="592" cy="100" r="10"><title>China · 218 visitors</title></circle>
-                <circle cx="164" cy="92" r="8"><title>United States · 144 visitors</title></circle>
-                <circle cx="356" cy="60" r="6"><title>United Kingdom · 86 visitors</title></circle>
-                <circle cx="568" cy="168" r="5"><title>Singapore · 52 visitors</title></circle>
-                <circle cx="380" cy="68" r="4"><title>Germany · 34 visitors</title></circle>
-            </svg>
-            <p class="visitor-map-note"><span class="visitor-map-dot"></span> Visitor locations · hover over a dot for details</p>
+<div class="visitor-card visitor-live-card">
+    <div class="visitor-card-header">Visitor overview</div>
+    <div class="visitor-widget-host" id="visitor-widget-host">
+        <div class="visitor-widget-fallback">
+            <img src="icons/world-map.svg" alt="World map" width="720" height="310">
+            <p id="visitor-widget-message">Loading visitor statistics…</p>
         </div>
-        <ul class="visitor-countries" aria-label="Sample visitor counts by country">
-            <li><span>Australia</span><b>312</b><i style="--share:100%"></i></li>
-            <li><span>China</span><b>218</b><i style="--share:70%"></i></li>
-            <li><span>United States</span><b>144</b><i style="--share:46%"></i></li>
-            <li><span>United Kingdom</span><b>86</b><i style="--share:28%"></i></li>
-            <li><span>Singapore</span><b>52</b><i style="--share:17%"></i></li>
-            <li><span>Germany</span><b>34</b><i style="--share:11%"></i></li>
-        </ul>
     </div>
-    <p class="visitor-disclaimer">Sample data for layout preview. Live visitor statistics are not connected.</p>
+    <a class="visitor-stats-link" href="https://mapmyvisitors.com/web/1c8qi" target="_blank" rel="noopener noreferrer">View visitor statistics ↗</a>
 </div>
 </section>
 </nav>
