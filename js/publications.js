@@ -151,7 +151,22 @@ function renderEntry(entry) {
     });
     item.append(authors);
     const venue = [plainText(entry.booktitle || entry.journal || ''), entry.volume ? `Vol. ${plainText(entry.volume)}` : '', entry.number ? `No. ${plainText(entry.number)}` : '', entry.pages ? `pp. ${plainText(entry.pages)}` : '', entry.year].filter(Boolean).join(', ');
-    appendText(item, 'p', venue, 'publication-venue');
+    const venueLine = document.createElement('p');
+    venueLine.className = 'publication-venue';
+    if (entry.booktitle) {
+        const audited = CORE_2026.papers[entry.key];
+        const abbreviation = entry.core_venue || audited?.venue || CORE_2026.dblpVenueAliases[entry.key.split('/')[1]];
+        const featuredVenues = ['AAAI', 'IJCAI', 'ICLR', 'ICML', 'NeurIPS', 'ACL', 'EMNLP', 'EACL', 'WWW', 'KDD', 'SIGIR', 'ICDM', 'CIKM', 'ECML PKDD', 'ICWS'];
+        if (featuredVenues.includes(abbreviation)) {
+            const track = (entry.core_track || audited?.track || '').toLowerCase();
+            const qualifier = { short: 'Short', findings: 'Findings', companion: 'Companion', tutorial: 'Tutorial' }[track];
+            const label = [abbreviation, plainText(entry.year || '')].filter(Boolean).join(' ');
+            appendText(venueLine, 'span', qualifier ? `${label} · ${qualifier}` : label, 'publication-venue-tag');
+            venueLine.append(document.createTextNode(' '));
+        }
+    }
+    venueLine.append(document.createTextNode(venue));
+    item.append(venueLine);
     if (entry.demo === 'true') appendText(item, 'span', 'Fictional layout example', 'publication-demo');
     for (const [field, label] of [['doi', 'DOI'], ['url', 'Paper'], ['pdf', 'PDF'], ['code', 'Code']]) {
         if (!entry[field]) continue;

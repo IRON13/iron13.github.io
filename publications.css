@@ -8,6 +8,7 @@
 .publication-link { font-size: 12px; font-weight: 400; white-space: nowrap; }
 ol.publication-list li::marker { font-size: 12px; }
 .publication-venue { color: var(--muted); font-size: 11px; font-style: italic; }
+.publication-venue-tag { display: inline-block; vertical-align: baseline; margin-right: 5px; padding: 1px 6px; border: 1px solid #d4e1ee; border-radius: 4px; background: #edf3fa; color: var(--accent); font-size: 10px; font-style: normal; font-weight: 600; line-height: 1.25; white-space: nowrap; }
 .publication-authors sup { margin-left: 2px; color: var(--accent); font-size: 11px; line-height: 0; }
 .publication-demo { display: inline-block; color: var(--muted); font-size: 12px; }
 
