@@ -10,7 +10,9 @@ const ccfData = JSON.parse(readFileSync(resolve(root, 'bib/ccf2026-venues.json')
 writeFileSync(resolve(root, 'js/ccf2026-data.js'), `const CCF_2026 = ${JSON.stringify(ccfData)};\n`);
 const csrData = JSON.parse(readFileSync(resolve(root, 'bib/csrankings-areas.json'), 'utf8'));
 writeFileSync(resolve(root, 'js/csrankings-data.js'), `const CSRANKINGS = ${JSON.stringify(csrData)};\n`);
-const context = vm.createContext({ URL, console, CORE_2026: coreData, CCF_2026: ccfData, CSRANKINGS: csrData });
+const journalData = JSON.parse(readFileSync(resolve(root, 'bib/journal-rankings.json'), 'utf8'));
+writeFileSync(resolve(root, 'js/journal-rankings-data.js'), `const JOURNAL_RANKINGS = ${JSON.stringify(journalData)};\n`);
+const context = vm.createContext({ URL, console, CORE_2026: coreData, CCF_2026: ccfData, CSRANKINGS: csrData, JOURNAL_RANKINGS: journalData });
 vm.runInContext(readFileSync(resolve(root, 'js/publications.js'), 'utf8'), context);
 const escape = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 // A minimal build-time DOM lets us reuse the browser renderer exactly.
@@ -42,6 +44,10 @@ for (const type of ['conference', 'journal']) {
         console.log('CORE 2026:', context.coreSummary(entries));
         console.log('CCF 2026:', context.ccfSummary(entries));
         console.log('CSRankings areas:', context.csRankingsSummary(entries));
+    }
+    if (type === 'journal') {
+        const metrics = String(context.renderJournalMetrics(entries));
+        html = html.replace(/(<div id="journal-metrics"[^>]*>)[\s\S]*?(?=\n<p id="journal-publications-status")/, (_, open) => `${open}${metrics}</div>\n`);
     }
     const list = entries.map(entry => String(context.renderEntry(entry))).join('\n');
     html = html.replace(new RegExp(`(<ol id="${type}-publications"[^>]*>)[\\s\\S]*?(</ol>)`), (_,open,close) => `<ol id="${type}-publications" class="publication-list" reversed start="${entries.length || 1}">\n${list}\n${close}`);

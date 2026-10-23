@@ -96,7 +96,11 @@ function plainText(value = '') {
 // Use the start of the conference period, rather than the BibTeX import date.
 function publicationDate(entry) {
     const year = Number(entry.year);
-    if (!entry.booktitle) return Date.UTC(year, 0, 1);
+    if (!entry.booktitle) {
+        const online = (entry.online_date || '').match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
+        if (online) return Date.UTC(Number(online[1]), Number(online[2]) - 1, Number(online[3] || 1));
+        return Date.UTC(year, 0, 1);
+    }
     const explicit = entry.conference_date || entry.eventdate;
     if (explicit) {
         const iso = explicit.match(/^(\d{4})-(\d{2})-(\d{2})/);
@@ -117,6 +121,10 @@ function publicationDate(entry) {
     return Date.UTC(year, 0, 1);
 }
 function comparePublications(a, b) {
+    if (a.journal && b.journal) {
+        const pending = Number(a.online_status === 'unverified') - Number(b.online_status === 'unverified');
+        if (pending) return pending;
+    }
     return publicationDate(b) - publicationDate(a)
         || plainText(a.title).localeCompare(plainText(b.title), 'en', { sensitivity: 'base' })
         || a.key.localeCompare(b.key, 'en');
@@ -166,6 +174,16 @@ function renderEntry(entry) {
         }
     }
     venueLine.append(document.createTextNode(venue));
+    if (entry.journal && entry.online_date) {
+        const online = entry.online_date.match(/^(\d{4})-(\d{2})(?:-(\d{2}))?$/);
+        if (online) {
+            const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][Number(online[2]) - 1];
+            venueLine.append(document.createTextNode(` · Online: ${online[3] ? `${Number(online[3])} ` : ''}${month} ${online[1]}`));
+        }
+    }
+    if (entry.journal && entry.online_status === 'unverified') {
+        venueLine.append(document.createTextNode(' · Online date awaiting verification'));
+    }
     item.append(venueLine);
     if (entry.demo === 'true') appendText(item, 'span', 'Fictional layout example', 'publication-demo');
     for (const [field, label] of [['doi', 'DOI'], ['url', 'Paper'], ['pdf', 'PDF'], ['code', 'Code']]) {
@@ -214,14 +232,14 @@ function ccfSummary(entries) {
     }
     return counts;
 }
-function appendConferenceMetric(row, counts, rank, scheme, label = rank) {
+function appendConferenceMetric(row, counts, rank, scheme, label = rank, kind = 'conference') {
     const metric = appendText(row, 'span', label ? `${label}: ` : '', 'conference-metric');
     const id = `${scheme.toLowerCase()}-${rank === 'A*' ? 'a-star' : rank.toLowerCase()}-breakdown`;
     const button = appendText(metric, 'button', String(counts[rank]), 'conference-metric-total conference-metric-toggle');
     button.setAttribute('type', 'button');
     button.setAttribute('aria-expanded', 'false');
     button.setAttribute('aria-controls', id);
-    button.setAttribute('aria-label', `${scheme} 2026 ${rank}: ${counts[rank]} papers, toggle conference breakdown`);
+    button.setAttribute('aria-label', `${scheme} 2026 ${rank}: ${counts[rank]} papers, toggle ${kind} breakdown`);
     const breakdown = Object.entries(counts.venues[rank])
         .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'en'))
         .map(([venue, count]) => `${venue} ${count}`).join(' · ');
@@ -318,6 +336,46 @@ function renderConferenceMetrics(entries) {
     layout.append(box, renderCcfMetrics(entries), renderCsRankingsMetrics(entries));
     return layout;
 }
+function journalSummary(entries, scheme) {
+    const ranks = scheme === 'ccf' ? ['A', 'B', 'C', 'Unlisted', 'Unverified'] : ['Q1', 'Q2', 'Q3', 'Q4', 'Unverified'];
+    const counts = { venues: {} };
+    for (const rank of ranks) { counts[rank] = 0; counts.venues[rank] = {}; }
+    const normalize = value => plainText(value).replace(/\s*\([^)]*\)\s*$/, '').toLowerCase();
+    for (const entry of entries) {
+        const record = JOURNAL_RANKINGS.journals[plainText(entry.doi).toLowerCase()]
+            || Object.values(JOURNAL_RANKINGS.journals).find(record => record.name && normalize(record.name) === normalize(entry.journal));
+        const rank = record?.[scheme] || (record && scheme === 'ccf' ? 'Unlisted' : 'Unverified');
+        const name = record?.abbreviation || plainText(entry.journal);
+        counts[rank]++;
+        counts.venues[rank][name] = (counts.venues[rank][name] || 0) + 1;
+    }
+    return counts;
+}
+function renderJournalMetrics(entries) {
+    const layout = document.createElement('div');
+    layout.className = 'journal-ranking-grid';
+    for (const scheme of ['ccf', 'jcr']) {
+        const counts = journalSummary(entries, scheme);
+        const box = document.createElement('div');
+        const row = document.createElement('div');
+        row.className = 'conference-metrics-row';
+        const heading = appendText(row, 'a', scheme === 'ccf' ? 'CCF (7th edition)' : 'JCR 2026', 'conference-metrics-label');
+        heading.href = scheme === 'ccf' ? JOURNAL_RANKINGS.ccf_source : 'https://clarivate.com/academia-government/scientific-and-academic-research/research-funding-analytics/journal-citation-reports/';
+        const ranks = scheme === 'ccf' ? ['A', 'B', 'C'] : ['Q1', 'Q2', 'Q3'];
+        if (scheme === 'ccf' && counts.Unverified) ranks.push('Unverified');
+        for (const rank of ranks) appendConferenceMetric(row, counts, rank, `Journal-${scheme.toUpperCase()}`, rank === 'Unlisted' ? 'Not listed' : rank === 'Unverified' ? 'Unverified' : rank, 'journal');
+        box.append(row);
+        const note = document.createElement('p');
+        note.className = 'conference-metrics-note';
+        note.append(document.createTextNode(scheme === 'ccf' ? 'Journal papers only.' : '2025 data · Best JIF quartile.'), document.createElement('br'));
+        if (scheme === 'jcr') note.append(document.createTextNode('Provisional · '));
+        const source = appendText(note, 'a', scheme === 'ccf' ? 'CCF catalogue' : 'Ranking methodology');
+        source.href = scheme === 'ccf' ? CCF_2026.catalogue : JOURNAL_RANKINGS.jcr_source;
+        box.append(note);
+        layout.append(box);
+    }
+    return layout;
+}
 async function loadSection(id, path) {
     const list = document.getElementById(id);
     const status = document.getElementById(`${id}-status`);
@@ -329,6 +387,7 @@ async function loadSection(id, path) {
         list.setAttribute('start', String(entries.length || 1));
         list.replaceChildren(...entries.map(renderEntry));
         if (id === 'conference-publications') document.getElementById('conference-metrics').replaceChildren(renderConferenceMetrics(entries));
+        if (id === 'journal-publications') document.getElementById('journal-metrics').replaceChildren(renderJournalMetrics(entries));
         status.textContent = entries.length ? '' : 'No publications added yet.';
         status.hidden = entries.length > 0;
     } catch (error) {
@@ -338,7 +397,7 @@ async function loadSection(id, path) {
     }
 }
 if (typeof document !== 'undefined') {
-    document.getElementById('conference-metrics').addEventListener('click', event => {
+    for (const id of ['conference-metrics', 'journal-metrics']) document.getElementById(id).addEventListener('click', event => {
         const button = event.target.closest('.conference-metric-toggle');
         if (!button) return;
         const details = document.getElementById(button.getAttribute('aria-controls'));

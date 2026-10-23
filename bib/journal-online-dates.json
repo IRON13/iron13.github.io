@@ -1,0 +1,87 @@
+{
+  "checked": "2026-10-23",
+  "policy": "First online publication on publisher website or publisher-deposited Crossref published-online; never DOI registration or issue date. All 13 dates verified.",
+  "papers": {
+    "Tewari2026Dementia": {
+      "doi": "10.1145/3859277",
+      "online_date": "2026-10-21",
+      "source": "https://dl.acm.org/doi/10.1145/3859277",
+      "basis": "Publisher-deposited Crossref published-online"
+    },
+    "Qing2026AutonomousVehicles": {
+      "doi": "10.1109/tits.2026.3724834",
+      "online_date": "2026-08-28",
+      "source": "https://ieeexplore.ieee.org/abstract/document/11672203/authors",
+      "basis": "IEEE Xplore Date of Publication"
+    },
+    "Li2026SelfSupervised": {
+      "doi": "10.1145/3841471",
+      "online_date": "2026-08-27",
+      "source": "https://dl.acm.org/doi/10.1145/3841471",
+      "basis": "Publisher-deposited Crossref published-online"
+    },
+    "Xie2026TrustworthyRAG": {
+      "doi": "10.53941/pc.2026.100008",
+      "online_date": "2026-08-07",
+      "source": "https://www.sciltp.com/journals/pc/articles/2607004625",
+      "basis": "Publisher-deposited Crossref published-online"
+    },
+    "SunLiXu2026Cracking": {
+      "doi": "10.1016/j.cscm.2026.e06364",
+      "online_date": "2026-07-28",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2214509526006157",
+      "basis": "Publisher Available online date, confirmed in user-supplied screenshot",
+      "evidence": "codex-clipboard-9c4f45f9-b7a4-4def-b1b1-da9dfc31e3a2.png"
+    },
+    "DBLP:journals/tnn/ChengLLXZLL25": {
+      "doi": "10.1109/tnnls.2024.3512790",
+      "online_date": "2024-12-11",
+      "source": "https://ieeexplore.ieee.org/document/10791303",
+      "basis": "IEEE Xplore Date of Publication"
+    },
+    "DBLP:journals/softx/OldfieldKXM25": {
+      "doi": "10.1016/j.softx.2025.102239",
+      "online_date": "2025-07-02",
+      "source": "https://www.sciencedirect.com/science/article/pii/S2352711025002067",
+      "basis": "Publisher Available online date, confirmed in user-supplied screenshot",
+      "evidence": "codex-clipboard-9b45020e-2f27-4f6d-9f16-a78a0985c74e.png"
+    },
+    "DBLP:journals/kais/ZhangYCLLXZ25": {
+      "doi": "10.1007/s10115-025-02404-7",
+      "online_date": "2025-04-12",
+      "source": "https://link.springer.com/10.1007/s10115-025-02404-7",
+      "basis": "Publisher-deposited Crossref published-online"
+    },
+    "DBLP:journals/datamine/ZhangXCLLXF25": {
+      "doi": "10.1007/s10618-025-01107-5",
+      "online_date": "2025-05-28",
+      "source": "https://link.springer.com/10.1007/s10618-025-01107-5",
+      "basis": "Publisher-deposited Crossref published-online"
+    },
+    "DBLP:journals/aim/RenTJXFLMXX25": {
+      "doi": "10.1002/aaai.70045",
+      "online_date": "2025-12-02",
+      "source": "https://onlinelibrary.wiley.com/doi/10.1002/aaai.70045",
+      "basis": "Publisher-deposited Crossref published-online"
+    },
+    "DBLP:journals/tkde/LuoHXZDYX26": {
+      "doi": "10.1109/tkde.2026.3719932",
+      "online_date": "2026-08-04",
+      "source": "https://ieeexplore.ieee.org/document/11640954",
+      "basis": "IEEE Xplore Date of Publication"
+    },
+    "DBLP:journals/tcss/RenZLLLCCXXL26": {
+      "doi": "10.1109/tcss.2026.3661211",
+      "online_date": "2026-02-26",
+      "source": "https://ieeexplore.ieee.org/document/11413928",
+      "basis": "IEEE Xplore Date of Publication"
+    },
+    "DBLP:journals/pr/ChengXLLYLL26": {
+      "doi": "10.1016/j.patcog.2025.112814",
+      "online_date": "2025-12-09",
+      "source": "https://www.sciencedirect.com/science/article/pii/S0031320325014773",
+      "basis": "Publisher Available online date, confirmed in user-supplied screenshot",
+      "evidence": "codex-clipboard-836aa548-ead5-41b4-ac88-1a27f8dcf0fe.png"
+    }
+  }
+}
